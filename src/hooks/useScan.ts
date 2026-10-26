@@ -112,6 +112,21 @@ export function useScan() {
         apiUrl,
         model
       });
+      // AI 调用失败：弹窗引导用户去设置自己的模型
+      if (result.aiError) {
+        Taro.showModal({
+          title: '识别失败',
+          content: result.aiErrorMessage || 'AI 模型调用失败',
+          confirmText: '去设置',
+          cancelText: '知道了',
+          success: r => {
+            if (r.confirm) {
+              Taro.navigateTo({ url: '/pages/settings/index' });
+            }
+          }
+        });
+        return null;
+      }
       // 非食品图片：toast 提示，不跳转结果页
       if (result.isFood === false) {
         Taro.showToast({ title: '未识别到食品配料表，请重新拍摄', icon: 'none' });

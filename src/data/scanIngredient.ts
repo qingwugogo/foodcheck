@@ -2,7 +2,7 @@ import Taro from '@tarojs/taro';
 import type { ScanResult } from '@/types/scan';
 import { ingredientList } from './ingredients';
 import { detectAllergens } from './allergens';
-import { getAiConfig } from './aiConfig';
+import { resolveAiConfigForCall } from './aiConfig';
 
 // scanIngredient 云函数 mock（H5 预览环境使用）
 // 真实微信小程序环境会调用云函数，走用户配置的 AI 视觉模型识别
@@ -39,17 +39,22 @@ async function fileToBase64(fileId: string): Promise<string | null> {
   }
 }
 
+type RecognizeOk = { isFood: boolean; foodName: string; ingredientText: string; ingredients: { name: string; safetyLevel: string; categoryLabel: string; function: string; riskDesc: string }[] };
+type RecognizeErr = { __aiError: true; message: string };
+
 /**
  * 按用户配置的厂商调用视觉模型识别配料表图片
- * @returns 识别失败或未配置 Key 返回 null
+ * @returns 识别结果，或 { __aiError: true, message } 表示失败
  */
-async function recognizeByAI(
-  base64Image: string
-): Promise<{ isFood: boolean; foodName: string; ingredientText: string; ingredients: { name: string; safetyLevel: string; categoryLabel: string; function: string; riskDesc: string }[] } | null> {
-  const { apiKey, apiUrl, model } = getAiConfig();
+async function recognizeByAI(base64Image: string): Promise<RecognizeOk | RecognizeErr> {
+  const cfg = resolveAiConfigForCall();
+  const { apiKey, apiUrl, model, provider } = cfg;
   if (!apiKey || !apiUrl || !model) {
-    console.warn('[scanIngredient mock] 未配置 API Key / 接口地址 / 模型名，跳过 AI 识别');
-    return null;
+    console.warn('[scanIngredient mock] 未配置 API Key / 接口地址 / 模型名');
+    return {
+      __aiError: true,
+      message: '未配置 API Key，请在「我的 → 设置」中填写自己的 API Key 后重试'
+    };
   }
   const prompt = `请识别这张图片，首先判断图片是否为「食品配料表」（食品包装上的配料列表文字，通常以"配料"开头）：
 1. 如果不是食品配料表（如风景、人物、动物、其他物体），返回 {"isFood": false}
@@ -85,14 +90,31 @@ async function recognizeByAI(
       }
     });
     if (res.statusCode !== 200) {
-      console.error('[scanIngredient mock] AI HTTP 错误:', res.statusCode, res.data?.error?.message || '');
-      return null;
+      const errMsg = (res.data as any)?.error?.message || `HTTP ${res.statusCode}`;
+      console.error('[scanIngredient mock] AI HTTP 错误:', res.statusCode, errMsg);
+      const isBuiltin = provider === 'zhipu' && !apiKey;
+      return {
+        __aiError: true,
+        message: isBuiltin
+          ? `内置免费模型调用失败（${errMsg}），建议在「我的 → 设置」中配置自己的 API Key`
+          : `自定义模型调用失败：${errMsg}，请检查 Key 是否有效`
+      };
     }
-    const content = res.data?.choices?.[0]?.message?.content || '';
-    return parseAiResponse(content);
-  } catch (err) {
+    const content = (res.data as any)?.choices?.[0]?.message?.content || '';
+    const parsed = parseAiResponse(content);
+    if (!parsed) {
+      return {
+        __aiError: true,
+        message: '模型返回格式异常，请检查模型是否支持图片输入'
+      };
+    }
+    return parsed;
+  } catch (err: any) {
     console.error('[scanIngredient mock] AI 调用失败:', err);
-    return null;
+    return {
+      __aiError: true,
+      message: `AI 调用失败：${err?.errMsg || err?.message || '网络错误'}，请检查网络或在「我的 → 设置」中更换模型`
+    };
   }
 }
 
@@ -326,58 +348,6 @@ async function buildResult(
   };
 }
 
-/**
- * mock 兜底（AI 不可用时使用）
- */
-function mockResult(fileId: string): ScanResult {
-  const picked = [
-    ingredientList.find(i => i.name === '白砂糖')!,
-    ingredientList.find(i => i.name === '果葡糖浆')!,
-    ingredientList.find(i => i.name === '柠檬酸')!,
-    ingredientList.find(i => i.name === '山梨酸钾')!,
-    ingredientList.find(i => i.name === '苯甲酸钠')!,
-    ingredientList.find(i => i.name === '阿斯巴甜')!,
-    ingredientList.find(i => i.name === 'β-胡萝卜素')!
-  ];
-  const ingredients = picked.map((item, idx) => ({
-    name: item.name,
-    order: idx + 1,
-    isRisk: item.safetyLevel !== 'safe',
-    safetyLevel: item.safetyLevel,
-    purpose: item.function.split('，')[0]
-  }));
-  const riskCount = ingredients.filter(i => i.isRisk).length;
-  let safetyLevel: ScanResult['safetyLevel'] = 'safe';
-  if (ingredients.some(i => i.safetyLevel === 'danger')) {
-    safetyLevel = 'danger';
-  } else if (ingredients.some(i => i.safetyLevel === 'caution')) {
-    safetyLevel = 'caution';
-  }
-  const summaryMap = {
-    safe: '该食品配料安全度较高，主要使用天然或公认安全的添加剂，可放心食用。',
-    caution: '该食品含有部分需注意的添加剂，建议控制食用频率，敏感人群及儿童慎选。',
-    danger: '该食品含有高风险添加剂，长期食用可能存在健康风险，建议尽量不吃或少量偶尔食用。'
-  };
-  const riskTips = ingredients
-    .filter(i => i.isRisk)
-    .map(i => {
-      const full = ingredientList.find(item => item.name === i.name);
-      return `${i.name}：${full?.riskDesc || '需注意'}`;
-    });
-  return {
-    foodName: '某品牌风味饮料',
-    ingredientText:
-      '水、白砂糖、果葡糖浆、柠檬酸、柠檬酸钠、山梨酸钾、苯甲酸钠、阿斯巴甜（含苯丙氨酸）、β-胡萝卜素、食用香精。',
-    ingredients,
-    safetyLevel,
-    riskCount,
-    summary: summaryMap[safetyLevel],
-    riskTips: riskTips.length ? riskTips : undefined,
-    imagePath: fileId || 'https://picsum.photos/id/312/300/300',
-    createTime: Date.now()
-  };
-}
-
 export default async function (data?: Record<string, any>): Promise<ScanResult> {
   console.log('[scanIngredient mock] 收到参数:', data);
   const fileId = (data?.fileId as string) || '';
@@ -387,33 +357,58 @@ export default async function (data?: Record<string, any>): Promise<ScanResult> 
   const base64 = process.env.TARO_ENV === 'h5' ? await fileToBase64(fileId) : null;
   if (base64) {
     const recognized = await recognizeByAI(base64);
-    if (recognized) {
-      // 非食品图片：返回标记结果，由前端 toast 提示
-      if (recognized.isFood === false) {
-        console.log('[scanIngredient mock] 非食品图片');
-        return {
-          isFood: false,
-          foodName: '',
-          ingredientText: '',
-          ingredients: [],
-          safetyLevel: 'safe',
-          riskCount: 0,
-          summary: '该图片不是食品配料表',
-          imagePath: fileId,
-          createTime: Date.now()
-        };
-      }
-      console.log('[scanIngredient mock] AI 识别成功:', recognized.foodName, recognized.ingredients.length, '种配料');
-      const result = await buildResult(recognized.foodName, recognized.ingredientText, recognized.ingredients);
-      result.isFood = true;
-      result.imagePath = fileId;
-      result.createTime = Date.now();
-      return result;
+    if ('__aiError' in recognized) {
+      // AI 调用失败：直接返回错误标记，不走 mock，由前端提示用户去设置自己的模型
+      console.warn('[scanIngredient mock] AI 识别失败:', recognized.message);
+      return {
+        aiError: true,
+        aiErrorMessage: recognized.message,
+        isFood: true,
+        foodName: '',
+        ingredientText: '',
+        ingredients: [],
+        safetyLevel: 'safe',
+        riskCount: 0,
+        summary: '',
+        imagePath: fileId,
+        createTime: Date.now()
+      };
     }
+    // 非食品图片：返回标记结果，由前端 toast 提示
+    if (recognized.isFood === false) {
+      console.log('[scanIngredient mock] 非食品图片');
+      return {
+        isFood: false,
+        foodName: '',
+        ingredientText: '',
+        ingredients: [],
+        safetyLevel: 'safe',
+        riskCount: 0,
+        summary: '该图片不是食品配料表',
+        imagePath: fileId,
+        createTime: Date.now()
+      };
+    }
+    console.log('[scanIngredient mock] AI 识别成功:', recognized.foodName, recognized.ingredients.length, '种配料');
+    const result = await buildResult(recognized.foodName, recognized.ingredientText, recognized.ingredients);
+    result.isFood = true;
+    result.imagePath = fileId;
+    result.createTime = Date.now();
+    return result;
   }
 
-  // 兜底 mock
-  console.log('[scanIngredient mock] 回退 mock 结果');
-  await new Promise(resolve => setTimeout(resolve, 800));
-  return mockResult(fileId);
+  // 非 H5 环境但走到了这里（不应发生），返回错误
+  return {
+    aiError: true,
+    aiErrorMessage: '当前环境不支持识别',
+    isFood: true,
+    foodName: '',
+    ingredientText: '',
+    ingredients: [],
+    safetyLevel: 'safe',
+    riskCount: 0,
+    summary: '',
+    imagePath: fileId,
+    createTime: Date.now()
+  };
 }

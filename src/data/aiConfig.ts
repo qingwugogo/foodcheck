@@ -84,13 +84,20 @@ export interface AiConfig {
 
 const STORAGE_KEY = 'aiConfig';
 
-/** 内置默认 Key：仅 H5 预览本地使用；小程序端不打包密钥，默认 Key 由云函数环境变量 GLM_API_KEY 提供 */
-const DEFAULT_API_KEY = process.env.TARO_ENV === 'h5' ? GLM_API_KEY : '';
+/**
+ * 脚本内置默认 Key：仅在代码内部使用，**不会暴露给设置页 UI**
+ * - H5 预览：从 .glm-key.ts 读取
+ * - weapp 小程序：为空，由云函数环境变量 GLM_API_KEY 提供
+ */
+const BUILTIN_DEFAULT_KEY = process.env.TARO_ENV === 'h5' ? GLM_API_KEY : '';
 
-/** 内置默认配置（智谱 GLM 免费模型，开箱可用，用户可覆盖） */
+/**
+ * 默认配置的厂商/地址/模型（不含 Key）
+ * 用户在「设置」页看到的就是这个，apiKey 始终为空
+ */
 export const DEFAULT_AI_CONFIG: AiConfig = {
   provider: 'zhipu',
-  apiKey: DEFAULT_API_KEY,
+  apiKey: '',
   apiUrl: getProviderPreset('zhipu').apiUrl,
   model: getProviderPreset('zhipu').model
 };
@@ -143,4 +150,14 @@ export async function saveAiConfig(config: AiConfig): Promise<void> {
  */
 export async function resetAiConfig(): Promise<void> {
   await Taro.removeStorage({ key: STORAGE_KEY });
+}
+
+/**
+ * 实际发起识别调用时使用的配置（内部使用，**不要展示在 UI**）
+ * 用户没填 Key 时回退到脚本内置默认 Key；H5 用 .glm-key.ts，weapp 为空（云函数会用环境变量兜底）
+ */
+export function resolveAiConfigForCall(): AiConfig {
+  const cfg = getAiConfig();
+  if (cfg.apiKey) return cfg;
+  return { ...cfg, apiKey: BUILTIN_DEFAULT_KEY };
 }

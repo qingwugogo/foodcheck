@@ -18,15 +18,19 @@ const DEFAULT_MODEL = 'glm-4v-flash'
  * @param {string} [userApiKey] 用户在「设置」中配置的 API Key，优先于云函数环境变量
  * @param {string} [userApiUrl] 用户在「设置」中配置的接口地址，留空用默认值
  * @param {string} [userModel] 用户在「设置」中配置的模型名，留空用默认值
- * @returns {Promise<{isFood:boolean, foodName:string, ingredientText:string, ingredients:{name:string,safetyLevel:string,categoryLabel:string,function:string,riskDesc:string}[]}|null>} 失败返回 null
+ * @returns {Promise<object>} 识别结果，或 { __aiError: true, message } 表示调用失败
  */
 async function recognizeByAI(base64Image, userApiKey, userApiUrl, userModel) {
   const apiKey = userApiKey || process.env.GLM_API_KEY
   const apiUrl = userApiUrl || DEFAULT_API_URL
   const model = userModel || DEFAULT_MODEL
+  const usingUserKey = !!userApiKey
   if (!apiKey) {
-    console.warn('[scanIngredient] 未配置 API Key（设置中未填写且无环境变量），跳过 AI 识别')
-    return null
+    console.warn('[scanIngredient] 未配置 API Key（设置中未填写且无环境变量）')
+    return {
+      __aiError: true,
+      message: '未配置 API Key，请在「我的 → 设置」中填写自己的 API Key 后重试'
+    }
   }
   const prompt = `请识别这张图片，首先判断图片是否为「食品配料表」（食品包装上的配料列表文字，通常以"配料"开头）：
 1. 如果不是食品配料表（如风景、人物、动物、其他物体），返回 {"isFood": false}
@@ -57,10 +61,24 @@ async function recognizeByAI(base64Image, userApiKey, userApiUrl, userModel) {
     const content = res.data && res.data.choices && res.data.choices[0]
       ? res.data.choices[0].message.content
       : ''
-    return parseAiResponse(content)
+    const parsed = parseAiResponse(content)
+    if (!parsed) {
+      return {
+        __aiError: true,
+        message: usingUserKey
+          ? '自定义模型返回格式异常，请检查模型是否支持图片输入'
+          : '内置模型返回格式异常，建议在「我的 → 设置」中配置自己的 API Key'
+      }
+    }
+    return parsed
   } catch (err) {
     console.error('[scanIngredient] AI 调用失败:', err.message || err)
-    return null
+    return {
+      __aiError: true,
+      message: usingUserKey
+        ? `自定义模型调用失败：${err.message || '网络错误'}，请检查 Key 是否有效`
+        : '内置模型调用失败，建议在「我的 → 设置」中配置自己的 API Key 后重试'
+    }
   }
 }
 
@@ -282,20 +300,8 @@ async function buildResult(foodName, ingredientText, ingredientObjects, allergen
 }
 
 /**
- * mock 兜底（GLM 不可用或图片下载失败时使用）
+ * mock 兜底已移除：AI 调用失败时直接返回错误，提示用户在「我的 → 设置」配置自己的模型
  */
-async function mockResult(fileId, allergenIds) {
-  const picked = ['白砂糖', '果葡糖浆', '柠檬酸', '山梨酸钾', '苯甲酸钠', '阿斯巴甜', 'β-胡萝卜素']
-  const ingredientObjects = picked.map(name => ({ name }))
-  const result = await buildResult(
-    '某品牌风味饮料',
-    '水、白砂糖、果葡糖浆、柠檬酸、柠檬酸钠、山梨酸钾、苯甲酸钠、阿斯巴甜（含苯丙氨酸）、β-胡萝卜素、食用香精。',
-    ingredientObjects,
-    allergenIds
-  )
-  result.imagePath = fileId || ''
-  return result
-}
 
 exports.main = async (event, context) => {
   try {
@@ -306,14 +312,18 @@ exports.main = async (event, context) => {
     console.log('[scanIngredient] 开始识别, fileId:', fileId)
 
     let result = null
+    let aiErrorMessage = ''
 
-    // 尝试下载云存储图片并调 GLM 识别
+    // 尝试下载云存储图片并调 AI 识别
     if (fileId && fileId.startsWith('cloud://')) {
       try {
         const dlRes = await cloud.downloadFile({ fileID: fileId })
         const base64Image = dlRes.fileContent.toString('base64')
         const recognized = await recognizeByAI(base64Image, apiKey, apiUrl, model)
-        if (recognized) {
+        if (recognized && recognized.__aiError) {
+          aiErrorMessage = recognized.message
+          console.warn('[scanIngredient] AI 识别失败:', aiErrorMessage)
+        } else if (recognized) {
           // 非食品图片：返回标记结果，由前端 toast 提示
           if (recognized.isFood === false) {
             result = {
@@ -333,13 +343,32 @@ exports.main = async (event, context) => {
           }
         }
       } catch (err) {
-        console.error('[scanIngredient] 图片下载/识别失败，回退 mock:', err.message || err)
+        console.error('[scanIngredient] 图片下载失败:', err.message || err)
+        aiErrorMessage = '图片处理失败，请重试'
       }
+    } else {
+      aiErrorMessage = '图片上传失败，请重试'
     }
 
-    // 兜底 mock
+    // AI 调用失败：不回退 mock，直接返回错误让前端提示用户配置自己的模型
     if (!result) {
-      result = await mockResult(fileId, allergens)
+      return {
+        code: 0,
+        message: 'success',
+        data: {
+          aiError: true,
+          aiErrorMessage: aiErrorMessage || 'AI 模型调用失败，请在「我的 → 设置」中配置自己的 API Key 后重试',
+          isFood: true,
+          foodName: '',
+          ingredientText: '',
+          ingredients: [],
+          safetyLevel: 'safe',
+          riskCount: 0,
+          summary: '',
+          imagePath: fileId || '',
+          createTime: Date.now()
+        }
+      }
     }
     result.createTime = Date.now()
 

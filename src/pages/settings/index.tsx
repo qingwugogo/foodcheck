@@ -24,7 +24,7 @@ function SettingsPage() {
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [saving, setSaving] = useState(false);
 
-  // 读取当前配置
+  // 读取当前配置（apiKey 为用户已保存的 Key；未保存则为空字符串）
   useEffect(() => {
     const cfg = getAiConfig();
     setConfig(cfg);
@@ -34,7 +34,8 @@ function SettingsPage() {
   }, []);
 
   const preset = getProviderPreset(config.provider);
-  const usingDefault = config.provider === 'zhipu' && config.apiKey === DEFAULT_AI_CONFIG.apiKey;
+  // 用户未填 Key = 使用内置默认（仅当 provider 为智谱时有效）
+  const usingDefault = !config.apiKey.trim();
 
   // 切换厂商：地址与模型回填该厂商默认值
   const pickProvider = (id: AiProvider) => {
@@ -51,10 +52,6 @@ function SettingsPage() {
       apiUrl: config.apiUrl.trim(),
       model: config.model.trim()
     };
-    if (!next.apiKey) {
-      Taro.showToast({ title: '请先填写 API Key', icon: 'none' });
-      return;
-    }
     if (!next.apiUrl) {
       Taro.showToast({ title: '请填写接口地址', icon: 'none' });
       setShowAdvanced(true);
@@ -65,11 +62,22 @@ function SettingsPage() {
       setShowAdvanced(true);
       return;
     }
+    // 未填 Key：非智谱厂商必须填 Key（内置 Key 只对智谱有效）
+    if (!next.apiKey && next.provider !== 'zhipu') {
+      Taro.showToast({ title: `使用 ${preset.label} 必须填写 API Key`, icon: 'none' });
+      return;
+    }
     setSaving(true);
     try {
-      await saveAiConfig(next);
+      if (!next.apiKey && next.provider === 'zhipu') {
+        // 智谱 + 空 Key = 恢复默认，直接清除用户配置
+        await resetAiConfig();
+        Taro.showToast({ title: '已使用内置免费配置', icon: 'success' });
+      } else {
+        await saveAiConfig(next);
+        Taro.showToast({ title: '已保存', icon: 'success' });
+      }
       setConfig(next);
-      Taro.showToast({ title: '已保存', icon: 'success' });
     } catch {
       Taro.showToast({ title: '保存失败', icon: 'none' });
     } finally {
@@ -81,7 +89,7 @@ function SettingsPage() {
   const handleReset = () => {
     Taro.showModal({
       title: '恢复默认配置',
-      content: '将清除你填写的厂商与 Key，改用内置默认配置（智谱 GLM 免费模型）。',
+      content: '将清除你填写的厂商与 Key，改用内置的智谱 GLM 免费模型。',
       success: async res => {
         if (!res.confirm) return;
         try {
@@ -102,8 +110,7 @@ function SettingsPage() {
         <View className={styles.tipCard}>
           <Text className={styles.tipTitle}>AI 识别配置</Text>
           <Text className={styles.tipText}>
-            配料表识别支持多家模型厂商（需兼容 OpenAI 图片输入格式）。选择厂商并填写自己的 API Key
-            即可；不填写则使用内置默认配置，开箱可用。
+            配料表识别支持多家模型厂商（需兼容 OpenAI 图片输入格式）。默认使用内置的智谱 GLM 免费模型，开箱可用；如需更稳定或自定义厂商，请填写自己的 API Key。
           </Text>
         </View>
 
@@ -133,7 +140,7 @@ function SettingsPage() {
           <Input
             className={styles.input}
             value={config.apiKey}
-            placeholder={`请输入${preset.label}的 API Key`}
+            placeholder={config.provider === 'zhipu' ? '留空使用内置免费 GLM-4V-Flash' : `请输入${preset.label}的 API Key`}
             onInput={e => setConfig(prev => ({ ...prev, apiKey: e.detail.value }))}
           />
         </View>
@@ -141,9 +148,7 @@ function SettingsPage() {
           <View className={classnames(styles.badge, usingDefault ? styles.badgeDefault : styles.badgeCustom)}>
             <Text className={styles.badgeText}>
               {usingDefault
-                ? DEFAULT_AI_CONFIG.apiKey
-                  ? '当前使用内置默认 Key（智谱 GLM）'
-                  : '当前使用服务端内置配置（智谱 GLM）'
+                ? '当前使用内置免费配置（智谱 GLM-4V-Flash）'
                 : `当前使用自定义 ${preset.label} 配置`}
             </Text>
           </View>
@@ -178,7 +183,7 @@ function SettingsPage() {
         <Text className={styles.notice}>
           {preset.keyHint}
           {'\n'}
-          识别失败（Key 失效、额度用尽或模型不支持图片）时会自动回退为示例结果。
+          识别失败（Key 失效、额度用尽或模型不支持图片）时会直接提示，请检查 Key 或切换厂商。
         </Text>
 
         <View className={styles.subBtn} onClick={handleReset}>

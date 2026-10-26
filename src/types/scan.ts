@@ -51,6 +51,10 @@ export interface ScanResult {
   imagePath?: string;
   /** 扫描时间戳 */
   createTime?: number;
+  /** AI 模型调用失败标记（true 时不应展示为正常结果） */
+  aiError?: boolean;
+  /** AI 调用失败的提示信息 */
+  aiErrorMessage?: string;
 }
 
 /** 扫描记录列表项 */
