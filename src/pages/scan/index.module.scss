@@ -1,0 +1,208 @@
+@use '@/styles/variables.scss' as *;
+
+.scanPage {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #e8f5ee 0%, $color-bg-page 40%);
+  padding: 0 $page-padding $spacing-xl;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 顶部品牌区 */
+.header {
+  padding: $spacing-lg 0 $spacing-md;
+  text-align: center;
+}
+
+.title {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-semibold;
+  color: $color-primary-dark;
+  margin-bottom: $spacing-xs;
+}
+
+.subtitle {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-normal;
+}
+
+/* 图片预览区 */
+.previewWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: $spacing-lg 0;
+  border-radius: $radius-lg;
+  background: $color-bg-card;
+  box-shadow: $shadow-card;
+  overflow: hidden;
+  min-height: 480rpx;
+}
+
+.preview {
+  width: 100%;
+  height: 480rpx;
+  display: block;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xl;
+  text-align: center;
+}
+
+.placeholderIcon {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: $radius-round;
+  background: rgba($color-primary, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacing-md;
+}
+
+.placeholderIconText {
+  font-size: 64rpx;
+}
+
+.placeholderText {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+  margin-bottom: $spacing-xs;
+}
+
+.placeholderHint {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+/* 来源按钮组 */
+.sourceGroup {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: $spacing-lg;
+}
+
+.sourceBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.sourceIcon {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: $radius-round;
+  background: $color-bg-card;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacing-xs;
+  box-shadow: $shadow-card;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.92);
+    background: $color-bg-hover;
+  }
+}
+
+.sourceIconText {
+  font-size: 40rpx;
+}
+
+.sourceLabel {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+/* 识别按钮 */
+.scanBtn {
+  width: 100%;
+  height: $button-height-lg;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  color: $color-text-white;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: $spacing-md;
+  transition: all $transition-base;
+  @include button-reset;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+
+  &.disabled {
+    background: $color-text-disabled;
+  }
+}
+
+.scanBtnText {
+  margin-left: $spacing-xs;
+}
+
+/* loading 遮罩 */
+.loadingMask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.loadingIcon {
+  width: 80rpx;
+  height: 80rpx;
+  border: 6rpx solid rgba(255, 255, 255, 0.3);
+  border-top-color: $color-text-white;
+  border-radius: $radius-round;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: $spacing-md;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingText {
+  color: $color-text-white;
+  font-size: $font-size-md;
+}
+
+/* 知识小贴士 */
+.tip {
+  margin-top: $spacing-md;
+  padding: $spacing-md;
+  background: rgba($color-primary, 0.08);
+  border-radius: $radius-md;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-normal;
+}
+
+.tipTitle {
+  color: $color-primary-dark;
+  font-weight: $font-weight-medium;
+  margin-bottom: $spacing-xs;
+}

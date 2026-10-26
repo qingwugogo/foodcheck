@@ -1,0 +1,182 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: $color-bg-page;
+}
+
+.scroll {
+  flex: 1;
+  padding: $spacing-md $spacing-md $spacing-xl;
+  box-sizing: border-box;
+}
+
+.tipCard {
+  background: #e8f7f0;
+  border: 1rpx solid #b7e6d2;
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+}
+
+.tipTitle {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-primary-dark;
+  margin-bottom: $spacing-xs;
+}
+
+.tipText {
+  display: block;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-normal;
+}
+
+.sectionTitle {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin: $spacing-lg 4rpx $spacing-sm;
+}
+
+.providerGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.providerCard {
+  width: 48.5%;
+  box-sizing: border-box;
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+  border-radius: $radius-lg;
+  padding: $spacing-sm $spacing-md;
+  margin-bottom: $spacing-sm;
+}
+
+.providerCardActive {
+  border-color: $color-primary;
+  background: #e8f7f0;
+}
+
+.providerLabel {
+  display: block;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.providerLabelActive {
+  color: $color-primary-dark;
+}
+
+.providerDesc {
+  display: block;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin-top: 4rpx;
+}
+
+.field {
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+  border-radius: $radius-lg;
+  padding: 0 $spacing-md;
+  margin-bottom: $spacing-sm;
+}
+
+.input {
+  height: $button-height-md;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.statusRow {
+  display: flex;
+  margin-top: $spacing-sm;
+}
+
+.badge {
+  padding: 6rpx $spacing-sm;
+  border-radius: $radius-round;
+}
+
+.badgeDefault {
+  background: #e8f7f0;
+}
+
+.badgeCustom {
+  background: #eaf2ff;
+}
+
+.badgeText {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+}
+
+.notice {
+  display: block;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  line-height: $line-height-loose;
+  margin-top: $spacing-lg;
+}
+
+.advancedToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-sm 4rpx;
+}
+
+.advancedToggleText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.advancedArrow {
+  font-size: $font-size-sm;
+  color: $color-primary;
+}
+
+.subBtn {
+  height: $button-height-md;
+  border-radius: $radius-button;
+  border: 2rpx solid $color-border;
+  background: $color-bg-card;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: $spacing-lg;
+}
+
+.subBtnText {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+}
+
+.footer {
+  padding: 16rpx 24rpx calc(16rpx + env(safe-area-inset-bottom));
+  background: $color-bg-card;
+  border-top: 1rpx solid $color-divider;
+}
+
+.saveBtn {
+  height: $button-height-lg;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary-light, $color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saveText {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+}

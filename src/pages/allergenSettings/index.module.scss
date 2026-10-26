@@ -1,0 +1,139 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f7f8fa;
+}
+
+.scroll {
+  flex: 1;
+  padding: 24rpx 24rpx 40rpx;
+  box-sizing: border-box;
+}
+
+.tipCard {
+  background: #fff7e6;
+  border: 1rpx solid #ffe7ba;
+  border-radius: 16rpx;
+  padding: 24rpx;
+}
+
+.tipTitle {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #d46b08;
+  margin-bottom: 12rpx;
+}
+
+.tipText {
+  display: block;
+  font-size: 24rpx;
+  color: #8c5a1a;
+  line-height: 1.6;
+}
+
+.sectionTitle {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1d2129;
+  margin: 32rpx 4rpx 20rpx;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 2rpx solid #e5e6eb;
+  border-radius: 16rpx;
+  padding: 24rpx 88rpx 24rpx 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.cardActive {
+  border-color: #f53f3f;
+  background: #fff5f5;
+}
+
+.icon {
+  font-size: 40rpx;
+  line-height: 1.2;
+  margin-bottom: 8rpx;
+}
+
+.name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1d2129;
+  margin-bottom: 6rpx;
+}
+
+.desc {
+  font-size: 22rpx;
+  color: #86909c;
+  line-height: 1.5;
+}
+
+.check {
+  position: absolute;
+  top: 24rpx;
+  right: 24rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 2rpx solid #c9cdd4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkActive {
+  background: #f53f3f;
+  border-color: #f53f3f;
+}
+
+.checkText {
+  font-size: 24rpx;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.notice {
+  display: block;
+  font-size: 22rpx;
+  color: #a9aeb8;
+  line-height: 1.6;
+  margin-top: 12rpx;
+}
+
+.footer {
+  padding: 16rpx 24rpx calc(16rpx + env(safe-area-inset-bottom));
+  background: #ffffff;
+  border-top: 1rpx solid #f0f0f0;
+}
+
+.saveBtn {
+  height: 88rpx;
+  border-radius: 44rpx;
+  background: linear-gradient(135deg, #f76560, #f53f3f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saveBtnPlain {
+  background: #c9cdd4;
+}
+
+.saveText {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #ffffff;
+}

@@ -1,0 +1,46 @@
+@use '@/styles/variables.scss' as *;
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-round;
+  font-weight: $font-weight-medium;
+  white-space: nowrap;
+}
+
+.sm {
+  padding: 4rpx 16rpx;
+  font-size: $font-size-xs;
+  height: 36rpx;
+  line-height: 1;
+}
+
+.md {
+  padding: 6rpx 20rpx;
+  font-size: $font-size-sm;
+  height: 44rpx;
+  line-height: 1;
+}
+
+.lg {
+  padding: 10rpx 32rpx;
+  font-size: $font-size-md;
+  height: 56rpx;
+  line-height: 1;
+}
+
+.safe {
+  color: $color-safe;
+  background: rgba(0, 180, 42, 0.1);
+}
+
+.caution {
+  color: $color-caution;
+  background: rgba(255, 125, 0, 0.1);
+}
+
+.danger {
+  color: $color-danger;
+  background: rgba(245, 63, 63, 0.1);
+}

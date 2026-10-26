@@ -1,0 +1,17 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+.taro-cache/
+
+# 本地密钥（保护 API Key，请勿提交）
+src/data/.glm-key.ts
+
+# 系统
+.DS_Store
+*.log
+
+# IDE / 编译器缓存
+.pai/
+.swc/
