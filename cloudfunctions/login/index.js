@@ -19,6 +19,8 @@ exports.main = async (event, context) => {
       // 新用户
       const now = db.serverDate()
       const newRecord = {
+        // 云函数写入不会自动带 _openid，需显式写入，保证用户数据按账号隔离
+        _openid: openid,
         nickname: '食安探索者',
         avatar: '',
         scanCount: 0,

@@ -9,6 +9,12 @@ exports.main = async (event, context) => {
     const openid = wxContext.OPENID
     const { page = 1, pageSize = 10 } = event
 
+    // 扫描记录按用户隔离：取不到 openid 时直接返回空，避免返回全库数据
+    if (!openid) {
+      console.warn('[getScanRecords] 未获取到 openid，返回空列表')
+      return { code: 0, message: 'success', data: { list: [], total: 0 } }
+    }
+
     const query = db.collection('scan_records').where({ _openid: openid })
     const countRes = await query.count()
     const listRes = await query

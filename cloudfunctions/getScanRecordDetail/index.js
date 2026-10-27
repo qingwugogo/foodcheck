@@ -11,6 +11,11 @@ exports.main = async (event, context) => {
     if (!recordId) {
       return { code: -1, message: '缺少参数 recordId', data: null }
     }
+    // 记录详情按用户隔离：取不到 openid 时直接返回空
+    if (!openid) {
+      console.warn('[getScanRecordDetail] 未获取到 openid，返回空')
+      return { code: 0, message: 'success', data: null }
+    }
 
     const res = await db.collection('scan_records')
       .where({ _id: recordId, _openid: openid })

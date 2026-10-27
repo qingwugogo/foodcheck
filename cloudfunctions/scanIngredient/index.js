@@ -32,10 +32,9 @@ async function recognizeByAI(base64Image, userApiKey, userApiUrl, userModel) {
       message: '未配置 API Key，请在「我的 → 设置」中填写自己的 API Key 后重试'
     }
   }
-  const prompt = `你是食品配料表识别助手，请严格判断这张图片：
-1. 只有图片中包含可辨认的「食品配料表 / 成分表」文字（食品包装上的配料列表，通常以"配料""原料"开头）时，才算食品配料表。
-2. 如果图片是风景、人物、动物、物品、食品外观、包装正面、菜单、二维码等没有配料表文字的内容，必须返回 {"isFood": false}，禁止编造任何配料。
-3. 如果是食品配料表，提取每个配料并返回完整信息：
+  const prompt = `请识别这张图片，首先判断图片是否为「食品配料表」（食品包装上的配料列表文字，通常以"配料"开头）：
+1. 如果不是食品配料表（如风景、人物、动物、其他物体），返回 {"isFood": false}
+2. 如果是食品配料表，提取每个配料并返回完整信息：
    - isFood: true
    - foodName: 食品名称（从包装识别，识别不到写"某品牌食品"）
    - ingredientText: 配料表原文完整文字（含标点）
@@ -106,8 +105,8 @@ function parseAiResponse(content) {
       return null
     }
   }
-  // 非食品图片（兼容模型返回字符串 "false" / 0）
-  if (parsed.isFood === false || parsed.isFood === 'false' || parsed.isFood === 0) {
+  // 非食品图片
+  if (parsed.isFood === false) {
     return { isFood: false, foodName: '', ingredientText: '', ingredients: [] }
   }
   // 食品配料表
@@ -115,16 +114,10 @@ function parseAiResponse(content) {
     console.warn('[scanIngredient] ingredients 非数组:', parsed)
     return null
   }
-  const ingredientText = String(parsed.ingredientText || '').trim()
-  // 模型声称是食品，但既没有配料文字也没有配料对象：按非食品处理，避免编造结果
-  if (!ingredientText && parsed.ingredients.length === 0) {
-    console.warn('[scanIngredient] 未识别到任何配料表内容，按非食品处理')
-    return { isFood: false, foodName: '', ingredientText: '', ingredients: [] }
-  }
   return {
     isFood: true,
     foodName: parsed.foodName || '某品牌食品',
-    ingredientText,
+    ingredientText: parsed.ingredientText || '',
     ingredients: parsed.ingredients
   }
 }
@@ -143,28 +136,13 @@ async function getStoredIngredients() {
 }
 
 /**
- * 收录未匹配配料到云数据库（去重；已存在但信息缺失时用本次识别结果补全）
+ * 收录未匹配配料到云数据库（去重）
  */
 async function storeIngredient(item) {
   try {
     const exist = await db.collection('ingredients').where({ name: item.name }).get()
     if (!exist.data.length) {
       await db.collection('ingredients').add({ data: item })
-      console.log('[scanIngredient] 新增配料:', item.name)
-      return
-    }
-    const current = exist.data[0]
-    const patch = {}
-    if (!current.function && item.function) patch.function = item.function
-    if (!current.riskDesc && item.riskDesc) patch.riskDesc = item.riskDesc
-    if (
-      (!current.categoryLabel || current.categoryLabel === '其他') &&
-      item.categoryLabel && item.categoryLabel !== '其他'
-    ) {
-      patch.categoryLabel = item.categoryLabel
-    }
-    if (Object.keys(patch).length) {
-      await db.collection('ingredients').doc(current._id).update({ data: patch })
     }
   } catch (e) {
     console.warn('[scanIngredient] 收录失败:', e.message)
@@ -263,18 +241,15 @@ async function buildResult(foodName, ingredientText, ingredientObjects, allergen
     const purpose = found ? found.function.split('，')[0] : ((obj && obj.function) || '').split('，')[0]
     const displayName = (obj && obj.name) || (found && found.name) || name
     const isRisk = safetyLevel !== 'safe'
-    // 配料库未收录：无论 AI 是否返回该配料的详情，都收录进库
-    if (!found) {
+    if (!found && obj) {
       unmatched.push({
         name: displayName,
         alias: [],
         category: 'baseMaterial',
-        categoryLabel: (obj && obj.categoryLabel) || '其他',
-        function: (obj && obj.function) || '',
+        categoryLabel: obj.categoryLabel || '其他',
+        function: obj.function || '',
         safetyLevel,
-        riskDesc: (obj && obj.riskDesc) || '',
-        source: 'scan',
-        createTime: db.serverDate()
+        riskDesc: obj.riskDesc || ''
       })
     }
     if (isRisk) {
@@ -397,28 +372,32 @@ exports.main = async (event, context) => {
     }
     result.createTime = Date.now()
 
-    // 保存扫描记录到数据库
-    try {
-      await db.collection('scan_records').add({
-        data: {
-          _openid: openid,
-          imageFileId: fileId || '',
-          foodName: result.foodName,
-          safetyLevel: result.safetyLevel,
-          riskCount: result.riskCount,
-          ingredientCount: result.ingredients.length,
-          ingredients: result.ingredients,
-          ingredientText: result.ingredientText,
-          summary: result.summary,
-          createTime: db.serverDate()
-        }
-      })
-      // 累计用户扫描次数
-      await db.collection('users').where({ _openid: openid }).update({
-        data: { scanCount: db.command.inc(1) }
-      })
-    } catch (e) {
-      console.error('[scanIngredient] 保存记录失败:', e)
+    // 保存扫描记录到数据库（记录按用户隔离，缺少 openid 时不保存）
+    if (!openid) {
+      console.warn('[scanIngredient] 未获取到 openid，跳过扫描记录保存')
+    } else {
+      try {
+        await db.collection('scan_records').add({
+          data: {
+            _openid: openid,
+            imageFileId: fileId || '',
+            foodName: result.foodName,
+            safetyLevel: result.safetyLevel,
+            riskCount: result.riskCount,
+            ingredientCount: result.ingredients.length,
+            ingredients: result.ingredients,
+            ingredientText: result.ingredientText,
+            summary: result.summary,
+            createTime: db.serverDate()
+          }
+        })
+        // 累计用户扫描次数
+        await db.collection('users').where({ _openid: openid }).update({
+          data: { scanCount: db.command.inc(1) }
+        })
+      } catch (e) {
+        console.error('[scanIngredient] 保存记录失败:', e)
+      }
     }
 
     return { code: 0, message: 'success', data: result }

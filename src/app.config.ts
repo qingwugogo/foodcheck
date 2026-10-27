@@ -13,7 +13,7 @@ export default defineAppConfig({
   window: {
     backgroundTextStyle: 'dark',
     navigationBarBackgroundColor: '#00b870',
-    navigationBarTitleText: '食安助手',
+    navigationBarTitleText: '食采助手',
     navigationBarTextStyle: 'white'
   },
   tabBar: {

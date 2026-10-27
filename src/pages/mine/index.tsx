@@ -66,7 +66,7 @@ function MinePage() {
           </View>
           <View className={styles.menuItem} onClick={() => handleMenu('/pages/about/index')}>
             <Text className={styles.menuIcon}>ℹ️</Text>
-            <Text className={styles.menuLabel}>关于食安助手</Text>
+            <Text className={styles.menuLabel}>关于食采助手</Text>
             <Text className={styles.menuArrow}>›</Text>
           </View>
           <View className={styles.menuItem} onClick={handleClear}>
@@ -76,7 +76,7 @@ function MinePage() {
           </View>
         </View>
 
-        <Text className={styles.version}>食安助手 v1.0.0</Text>
+        <Text className={styles.version}>食采助手 v1.0.0</Text>
       </ScrollView>
     </View>
   );

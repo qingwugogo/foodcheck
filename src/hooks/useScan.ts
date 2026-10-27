@@ -1,5 +1,6 @@
 import Taro from '@tarojs/taro';
 import { callFunction } from '@/services/cloud';
+import { getCurrentOpenid, scanRecordsKey } from '@/services/user';
 import { getAiConfig } from '@/data/aiConfig';
 import { useScanStore } from '@/store/useScanStore';
 import type { ScanResult } from '@/types/scan';
@@ -44,23 +45,26 @@ async function makeThumb(path: string): Promise<string | null> {
 
 /**
  * 保存扫描记录到本地存储（H5 / 云函数不可用时的持久化方案）
+ * 按当前用户 openid 分 key 存储，避免不同账号在同一设备上互相看到记录
  * 最新记录在前，最多保留 50 条
  */
 async function saveRecord(result: ScanResult, localPath: string): Promise<void> {
   try {
+    const openid = await getCurrentOpenid();
+    const storageKey = scanRecordsKey(openid);
     const recordId = result.recordId || `rec_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
     result.recordId = recordId;
     const thumb = await makeThumb(localPath);
     let stored: ScanResult[] = [];
     try {
-      const r = await Taro.getStorage({ key: 'scanRecords' });
+      const r = await Taro.getStorage({ key: storageKey });
       if (Array.isArray(r.data)) stored = r.data;
     } catch {
       // 尚无记录
     }
     stored.unshift({ ...result, imagePath: thumb || result.imagePath });
-    await Taro.setStorage({ key: 'scanRecords', data: stored.slice(0, 50) });
-    console.log('[Scan] 扫描记录已保存:', recordId);
+    await Taro.setStorage({ key: storageKey, data: stored.slice(0, 50) });
+    console.log('[Scan] 扫描记录已保存:', recordId, '所有者:', openid || 'anonymous');
   } catch (err) {
     console.warn('[Scan] 保存扫描记录失败:', err);
   }

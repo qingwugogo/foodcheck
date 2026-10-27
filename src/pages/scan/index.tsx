@@ -41,7 +41,7 @@ function ScanPage() {
     <View className={styles.scanPage}>
       {/* 顶部品牌区 */}
       <View className={styles.header}>
-        <Text className={styles.title}>食安助手</Text>
+        <Text className={styles.title}>食采助手</Text>
         <Text className={styles.subtitle}>拍下配料表，秒懂每种成分 · 健康吃得更安心</Text>
       </View>
 
