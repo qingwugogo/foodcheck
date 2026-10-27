@@ -1966,6 +1966,3686 @@ export const ingredientList: Ingredient[] = [
     riskDesc: 'JECFA ADI 0~70mg/kg（以磷计）。过量磷影响钙磷平衡，建议适量。',
     description: '焦磷酸钠是螯合缓冲稳定剂，过量磷影响钙代谢，建议适量。',
     usageLimit: '依食品类别（详见 GB 2760）'
+  },
+  // ===== 扩充配料库（第二批） =====
+  {
+    name: '山梨酸',
+    alias: ['2,4-己二烯酸', '花楸酸'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '抑制霉菌、酵母菌和多种腐败菌生长，是山梨酸钾的酸型母体。',
+    action: '一种不饱和脂肪酸，人体可正常代谢为二氧化碳和水，毒性低于苯甲酸类。在酸性环境（pH<5.5）中防腐效力最强，多用于果汁、果酱、饮料、酱油等。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，但过量可能刺激消化道，敏感人群少量摄入为宜。',
+    description: '本品是常见的防腐剂，在配料表中通常以「山梨酸」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '苯甲酸',
+    alias: ['安息香酸'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '抑制细菌和霉菌生长，是苯甲酸钠的酸型母体。',
+    action: '在酸性条件下防腐效果最佳，常用于碳酸饮料、果汁、酱油和果酱。在肝脏中与甘氨酸结合形成马尿酸排出体外。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '过量摄入可能加重肝脏负担，婴幼儿及肝功能不佳者应少吃含苯甲酸防腐剂的食品。',
+    description: '本品是常见的防腐剂，在配料表中通常以「苯甲酸」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '脱氢乙酸',
+    alias: ['脱氢醋酸'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '广谱防腐剂，抑制霉菌、酵母菌和细菌，是脱氢乙酸钠的酸型母体。',
+    action: '脂溶性较强，能穿透微生物细胞膜抑制其生长，对霉菌效果突出，常用于糕点、酱菜、腐乳。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '长期大量摄入可能影响食欲和消化，建议控制含该防腐剂的加工食品摄入。',
+    description: '本品是常见的防腐剂，在配料表中通常以「脱氢乙酸」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '对羟基苯甲酸丙酯',
+    alias: ['尼泊金丙酯', '丙酯'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '酯类防腐剂，抑制霉菌和酵母菌生长。',
+    action: '脂溶性好，对霉菌和酵母菌抑菌力强，常用于酱油、醋、饮料、果酱。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '有轻微内分泌干扰争议，敏感人群和儿童建议少吃。',
+    description: '本品是常见的防腐剂，在配料表中通常以「对羟基苯甲酸丙酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '对羟基苯甲酸丁酯',
+    alias: ['尼泊金丁酯', '丁酯'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '酯类防腐剂，抑制霉菌和酵母菌。',
+    action: '脂溶性较丙酯更强，抑菌谱相似，多用于醋、酱油和清凉饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '有轻微内分泌干扰争议，建议控制摄入。',
+    description: '本品是常见的防腐剂，在配料表中通常以「对羟基苯甲酸丁酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '丙酸',
+    alias: ['初油酸'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '抑制霉菌和部分细菌生长，是丙酸钙、丙酸钠的酸型母体。',
+    action: '短链脂肪酸，人体可正常代谢供能。对霉菌抑菌效果强，常用于面包、糕点防霉。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，过量可能刺激胃肠道。',
+    description: '本品是常见的防腐剂，在配料表中通常以「丙酸」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '乳酸钠',
+    alias: ['2-羟基丙酸钠'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '抑菌保鲜并调节酸度，常用于肉制品和饮料。',
+    action: '可降低水分活度、抑制细菌生长，同时改善肉制品持水性和口感。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，钠摄入需计入每日总量。',
+    description: '本品是常见的防腐剂，在配料表中通常以「乳酸钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: 'ε-聚赖氨酸盐酸盐',
+    alias: ['聚赖氨酸'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '天然生物防腐剂，抑制革兰氏阳性菌和部分霉菌。',
+    action: '由微生物发酵产生的多肽，安全性高，常用于米饭、糕点、肉制品保鲜。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的防腐剂，在配料表中通常以「ε-聚赖氨酸盐酸盐」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '双乙酸钾',
+    alias: ['二乙酸钾'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '抑制霉菌和细菌生长，兼有调味作用。',
+    action: '在含水量高的食品中释放乙酸，抑制腐败菌，常用于面制品、酱菜。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，过量摄入可能影响钙吸收。',
+    description: '本品是常见的防腐剂，在配料表中通常以「双乙酸钾」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '肉桂醛',
+    alias: ['桂醛'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '天然植物来源防腐剂，抑制霉菌和细菌。',
+    action: '从肉桂中提取的醛类化合物，具有广谱抑菌性，同时提供特殊香气，常用于果蔬保鲜和调味。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全，少数人群可能对其香气敏感。',
+    description: '本品是常见的防腐剂，在配料表中通常以「肉桂醛」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '乙氧基喹',
+    alias: ['乙氧喹'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '抗氧化兼防腐，主要用于水果保鲜。',
+    action: '能抑制果蔬表面的氧化和微生物生长，常用于苹果、梨的采后保鲜。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '主要残留在果皮，食用前充分清洗可降低摄入。',
+    description: '本品是常见的防腐剂，在配料表中通常以「乙氧基喹」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '联苯醚',
+    alias: ['二苯醚'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '防霉保鲜剂，用于柑橘类水果表面处理。',
+    action: '抑制柑橘类水果表面霉菌生长，延长贮运期。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '主要残留在果皮，果肉中含量极低，食用前清洗。',
+    description: '本品是常见的防腐剂，在配料表中通常以「联苯醚」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '仲丁胺',
+    alias: ['2-氨基丁烷'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '熏蒸型防腐剂，用于水果蔬菜贮运保鲜。',
+    action: '以气体形式抑制霉菌和细菌，常用于柑橘、苹果的贮藏。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '挥发性强，处理后果品需充分通风，残留量受严格限制。',
+    description: '本品是常见的防腐剂，在配料表中通常以「仲丁胺」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '二氧化氯',
+    alias: ['稳定态二氧化氯'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '强氧化性消毒防腐剂，用于水处理和食品加工消毒。',
+    action: '通过氧化微生物细胞蛋白实现杀菌，常用于饮用水、果蔬清洗和食品设备消毒。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '使用浓度需严格控制，过量残留可能刺激消化道。',
+    description: '本品是常见的防腐剂，在配料表中通常以「二氧化氯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '过氧化氢',
+    alias: ['双氧水'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '消毒漂白剂，用于食品加工设备和包装材料消毒。',
+    action: '分解后生成水和氧，无有害残留，常用于无菌包装和食品接触面消毒。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '工业级不得直接用于食品，食品级使用需控制残留。',
+    description: '本品是常见的防腐剂，在配料表中通常以「过氧化氢」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '溶菌酶',
+    alias: ['胞壁质酶'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '天然酶类防腐剂，水解细菌细胞壁。',
+    action: '从蛋清中提取，能特异性水解革兰氏阳性菌细胞壁肽聚糖，常用于乳制品、肉制品保鲜。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然蛋白质，常规使用安全，蛋类过敏者需留意来源。',
+    description: '本品是常见的防腐剂，在配料表中通常以「溶菌酶」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '壳聚糖',
+    alias: ['甲壳素'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '天然多糖防腐保鲜剂，抑制微生物并形成保鲜膜。',
+    action: '从虾蟹外壳提取，具有抑菌性和成膜性，常用于果蔬涂膜保鲜。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全，甲壳类过敏者需留意。',
+    description: '本品是常见的防腐剂，在配料表中通常以「壳聚糖」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '噻苯咪唑',
+    alias: ['噻菌灵'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '内吸性杀菌剂，用于水果采后防腐。',
+    action: '可被植物组织吸收，抑制霉菌生长，常用于柑橘、香蕉采后处理。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '需控制残留量，食用前清洗果皮可降低摄入。',
+    description: '本品是常见的防腐剂，在配料表中通常以「噻苯咪唑」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '山梨酸钙',
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '山梨酸的钙盐，抑制霉菌和酵母菌。',
+    action: '在酸性食品中释放山梨酸起防腐作用，兼补充钙质，常用于面包、乳制品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的防腐剂，在配料表中通常以「山梨酸钙」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '焦亚硫酸钠',
+    alias: ['偏重亚硫酸钠'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '释放二氧化硫，起防腐和漂白作用。',
+    action: '在水中生成二氧化硫，抑制微生物并漂白护色，常用于蜜饯、干果、葡萄酒。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '二氧化硫可诱发哮喘患者不适，残留量受严格限制。',
+    description: '本品是常见的防腐剂，在配料表中通常以「焦亚硫酸钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '焦亚硫酸钾',
+    alias: ['偏重亚硫酸钾'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '释放二氧化硫，防腐漂白。',
+    action: '作用与焦亚硫酸钠相同，多用于葡萄酒和果酒。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '二氧化硫可诱发哮喘，敏感人群少吃。',
+    description: '本品是常见的防腐剂，在配料表中通常以「焦亚硫酸钾」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '亚硫酸钠',
+    alias: ['无水亚硫酸钠'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '释放二氧化硫，防腐漂白。',
+    action: '抑制微生物和酶促褐变，常用于果蔬加工和糖类漂白。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '二氧化硫残留可能引起呼吸道不适。',
+    description: '本品是常见的防腐剂，在配料表中通常以「亚硫酸钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '亚硫酸氢钠',
+    alias: ['重亚硫酸钠'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '释放二氧化硫，防腐抗氧化。',
+    action: '兼有漂白和抗氧化作用，常用于蜜饯、果蔬罐头。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '二氧化硫敏感人群需注意。',
+    description: '本品是常见的防腐剂，在配料表中通常以「亚硫酸氢钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '低亚硫酸钠',
+    alias: ['保险粉'],
+    category: 'preservative',
+    categoryLabel: '防腐剂',
+    function: '强还原性漂白防腐剂。',
+    action: '还原能力强，用于蜜饯、干果的漂白和护色，但稳定性差、残留需严控。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '使用不当易造成二氧化硫超标，建议少吃相关加工食品。',
+    description: '本品是常见的防腐剂，在配料表中通常以「低亚硫酸钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '抗坏血酸钠',
+    alias: ['维生素C钠'],
+    category: 'antioxidant',
+    categoryLabel: '抗氧化剂',
+    function: '抗氧化剂，防止食品氧化变色。',
+    action: '抗坏血酸的钠盐，水溶性好，能清除自由基、抑制褐变，常用于饮料、肉制品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，钠摄入需计入总量。',
+    description: '本品是常见的抗氧化剂，在配料表中通常以「抗坏血酸钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '抗坏血酸钙',
+    alias: ['维生素C钙'],
+    category: 'antioxidant',
+    categoryLabel: '抗氧化剂',
+    function: '抗氧化剂兼钙强化。',
+    action: '水溶性抗氧化剂，抑制食品氧化和褐变，同时提供钙源。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的抗氧化剂，在配料表中通常以「抗坏血酸钙」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '抗坏血酸棕榈酸酯',
+    alias: ['维生素C棕榈酸酯'],
+    category: 'antioxidant',
+    categoryLabel: '抗氧化剂',
+    function: '脂溶性抗氧化剂，保护油脂不氧化。',
+    action: '抗坏血酸的脂溶性衍生物，能溶于油脂中抑制氧化酸败，常用于食用油和含油食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的抗氧化剂，在配料表中通常以「抗坏血酸棕榈酸酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '异抗坏血酸',
+    alias: ['赤藻糖酸'],
+    category: 'antioxidant',
+    categoryLabel: '抗氧化剂',
+    function: '抗氧化剂，防止食品氧化变色。',
+    action: '抗坏血酸的立体异构体，抗氧化性能相近但无维生素活性，常用于肉制品护色。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的抗氧化剂，在配料表中通常以「异抗坏血酸」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '没食子酸辛酯',
+    alias: ['辛基没食子酸酯'],
+    category: 'antioxidant',
+    categoryLabel: '抗氧化剂',
+    function: '脂溶性抗氧化剂，防止油脂酸败。',
+    action: '没食子酸的辛酯，脂溶性好，常用于油脂和含油食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '大剂量动物实验有不良影响，建议控制摄入。',
+    description: '本品是常见的抗氧化剂，在配料表中通常以「没食子酸辛酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '没食子酸十二酯',
+    alias: ['十二烷基没食子酸酯', '月桂酸没食子酸酯'],
+    category: 'antioxidant',
+    categoryLabel: '抗氧化剂',
+    function: '脂溶性抗氧化剂，防止油脂酸败。',
+    action: '长链酯，脂溶性更强，用于油脂和油炸食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '大剂量有安全性争议，建议少吃油炸食品。',
+    description: '本品是常见的抗氧化剂，在配料表中通常以「没食子酸十二酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '硫代二丙酸二月桂酯',
+    alias: ['DLTP'],
+    category: 'antioxidant',
+    categoryLabel: '抗氧化剂',
+    function: '辅助抗氧化剂，分解油脂氧化产物。',
+    action: '能分解油脂氧化过程中产生的过氧化物，与BHA、BHT等主抗氧化剂协同使用。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的抗氧化剂，在配料表中通常以「硫代二丙酸二月桂酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '乙二胺四乙酸二钠',
+    alias: ['EDTA二钠'],
+    category: 'antioxidant',
+    categoryLabel: '抗氧化剂',
+    function: '螯合金属离子，防止氧化变色。',
+    action: '螯合铁、铜等金属离子，抑制其催化的氧化反应，常用于饮料、罐头、蛋黄酱。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '过量摄入可能影响矿物质吸收，建议控制。',
+    description: '本品是常见的抗氧化剂，在配料表中通常以「乙二胺四乙酸二钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '植酸',
+    alias: ['肌醇六磷酸'],
+    category: 'antioxidant',
+    categoryLabel: '抗氧化剂',
+    function: '天然抗氧化剂，螯合金属离子。',
+    action: '从植物种子中提取，能螯合金属离子、抑制氧化，常用于饮料和油脂。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，但会结合矿物质影响吸收，不宜过量。',
+    description: '本品是常见的抗氧化剂，在配料表中通常以「植酸」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '葡萄糖氧化酶',
+    alias: ['GOx'],
+    category: 'antioxidant',
+    categoryLabel: '抗氧化剂',
+    function: '酶类抗氧化剂，消耗氧气防止氧化。',
+    action: '催化葡萄糖与氧反应生成葡萄糖酸和过氧化氢，从而去除包装内氧气，常用于瓶装食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然酶制剂，常规使用安全。',
+    description: '本品是常见的抗氧化剂，在配料表中通常以「葡萄糖氧化酶」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '愈创树脂',
+    alias: ['愈创木树脂'],
+    category: 'antioxidant',
+    categoryLabel: '抗氧化剂',
+    function: '天然抗氧化剂，防止油脂氧化。',
+    action: '天然树脂提取物，具有抗氧化活性，常用于油脂和含油食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的抗氧化剂，在配料表中通常以「愈创树脂」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '爱德万甜',
+    alias: ['Advantame'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '高倍甜味剂，甜度约为蔗糖的2万倍。',
+    action: '阿斯巴甜的衍生物，甜度极高、用量极小，常用于饮料和低糖食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '含苯丙氨酸，苯丙酮尿症患者禁用。',
+    description: '本品是常见的甜味剂，在配料表中通常以「爱德万甜」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '罗汉果甜苷',
+    alias: ['罗汉果提取物', 'Mogroside'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '天然高倍甜味剂，甜度约为蔗糖的300倍。',
+    action: '从罗汉果中提取的三萜糖苷，甜味纯正、几乎无热量，常用于饮料和保健食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的甜味剂，在配料表中通常以「罗汉果甜苷」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '索马甜',
+    alias: ['Thaumatin', '非洲甜蛋白'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '天然蛋白质甜味剂，甜度约为蔗糖的2000倍。',
+    action: '从非洲竹芋果实中提取的甜蛋白，甜味持久，常用于口香糖和饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然蛋白质，常规使用安全，极少数人可能过敏。',
+    description: '本品是常见的甜味剂，在配料表中通常以「索马甜」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '甘草酸铵',
+    alias: ['甘草甜素铵'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '天然甜味剂，甜度约为蔗糖的50倍。',
+    action: '从甘草中提取，甜味持久并带有特殊风味，常用于蜜饯、饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '长期大量摄入可能引起水钠潴留，高血压患者慎用。',
+    description: '本品是常见的甜味剂，在配料表中通常以「甘草酸铵」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '甘草酸一钾',
+    alias: ['甘草酸钾'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '天然甜味剂，兼具增味作用。',
+    action: '甘草酸的钾盐，甜味缓和，常用于酱油、蜜饯调味。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '长期大量摄入可能影响血压，适量即可。',
+    description: '本品是常见的甜味剂，在配料表中通常以「甘草酸一钾」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '乳糖醇',
+    alias: ['Lactitol'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '糖醇类甜味剂，甜度约为蔗糖的40%。',
+    action: '由乳糖氢化制得，热量低、不致龋齿，常用于无糖糖果和烘焙食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '过量摄入可能引起腹胀腹泻，乳糖不耐受者注意。',
+    description: '本品是常见的甜味剂，在配料表中通常以「乳糖醇」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '异麦芽酮糖醇',
+    alias: ['益寿糖', 'Isomalt'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '糖醇类甜味剂，甜度约为蔗糖的50%。',
+    action: '由蔗糖转化制得，低吸湿性、不致龋齿，常用于无糖糖果和巧克力。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '过量摄入可能引起腹泻。',
+    description: '本品是常见的甜味剂，在配料表中通常以「异麦芽酮糖醇」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: 'D-甘露糖醇',
+    alias: ['甘露醇'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '糖醇类甜味剂，甜度约为蔗糖的70%。',
+    action: '低热量、不致龋齿，常用于无糖口香糖和食品加工。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '过量摄入可能引起腹泻，建议适量。',
+    description: '本品是常见的甜味剂，在配料表中通常以「D-甘露糖醇」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '低聚木糖',
+    alias: ['木寡糖'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '功能性低聚糖，甜度低、促进肠道有益菌。',
+    action: '从玉米芯等提取，选择性促进双歧杆菌增殖，常用于饮料和保健食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全，过量可能胀气。',
+    description: '本品是常见的甜味剂，在配料表中通常以「低聚木糖」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '低聚果糖',
+    alias: ['果寡糖', 'FOS'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '功能性低聚糖，甜度约为蔗糖的30%。',
+    action: '促进肠道有益菌增殖、改善肠道菌群，常用于乳制品和饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，过量可能引起胀气。',
+    description: '本品是常见的甜味剂，在配料表中通常以「低聚果糖」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '低聚异麦芽糖',
+    alias: ['异麦芽低聚糖', 'IMO'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '功能性低聚糖，甜度低、保湿性好。',
+    action: '促进双歧杆菌增殖，改善肠道健康，常用于饮料和烘焙食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，过量可能胀气。',
+    description: '本品是常见的甜味剂，在配料表中通常以「低聚异麦芽糖」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '聚葡萄糖',
+    alias: ['Polydextrose'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '水溶性膳食纤维，低热量填充型甜味剂。',
+    action: '由葡萄糖聚合而成，提供体积和口感但热量低，常用于无糖食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，过量可能引起腹胀。',
+    description: '本品是常见的甜味剂，在配料表中通常以「聚葡萄糖」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '阿力甜',
+    alias: ['Alitame'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '高倍甜味剂，甜度约为蔗糖的2000倍。',
+    action: '由氨基酸衍生物构成，甜味接近蔗糖，常用于饮料和糖果。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '含苯丙氨酸，苯丙酮尿症患者禁用。',
+    description: '本品是常见的甜味剂，在配料表中通常以「阿力甜」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '新橙皮苷二氢查尔酮',
+    alias: ['NHDC'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '天然高倍甜味剂，兼具增香作用。',
+    action: '从柑橘类提取，甜度高、热量低，能掩盖苦味，常用于饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的甜味剂，在配料表中通常以「新橙皮苷二氢查尔酮」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '低聚半乳糖',
+    alias: ['GOS'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '功能性低聚糖，促进肠道有益菌。',
+    action: '从乳糖转化制得，能促进双歧杆菌增殖，常用于婴幼儿食品和乳制品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，乳糖不耐受者需留意。',
+    description: '本品是常见的甜味剂，在配料表中通常以「低聚半乳糖」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '水苏糖',
+    alias: ['Stachyose'],
+    category: 'sweetener',
+    categoryLabel: '甜味剂',
+    function: '功能性四糖，促进肠道有益菌增殖。',
+    action: '天然存在于豆类中，可选择性地促进双歧杆菌生长，常用于保健食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，过量可能胀气。',
+    description: '本品是常见的甜味剂，在配料表中通常以「水苏糖」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '乙基麦芽酚',
+    alias: ['麦芽酚乙酯'],
+    category: 'flavor enhancer',
+    categoryLabel: '增味剂',
+    function: '增香增味剂，能增强甜香和果香。',
+    action: '微量添加即可显著提升食品香气和甜感，常用于饮料、糖果、烘焙食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，过量使用会掩盖原料本味。',
+    description: '本品是常见的增味剂，在配料表中通常以「乙基麦芽酚」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: 'L-丙氨酸',
+    category: 'flavor enhancer',
+    categoryLabel: '增味剂',
+    function: '氨基酸类增味剂，缓和酸味和苦味。',
+    action: '天然氨基酸，能提升食品鲜甜感、缓和异味，常用于饮料和调味品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的增味剂，在配料表中通常以「L-丙氨酸」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '甘氨酸',
+    alias: ['氨基乙酸'],
+    category: 'flavor enhancer',
+    categoryLabel: '增味剂',
+    function: '氨基酸类增味剂，调节甜味和酸味。',
+    action: '最简单的氨基酸，能缓冲酸味、增强甜味，常用于饮料和调味料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的增味剂，在配料表中通常以「甘氨酸」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: 'DL-丙氨酸',
+    category: 'flavor enhancer',
+    categoryLabel: '增味剂',
+    function: '氨基酸类增味剂，改善风味平衡。',
+    action: '丙氨酸的外消旋体，增味效果与L-丙氨酸相近，成本较低。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的增味剂，在配料表中通常以「DL-丙氨酸」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '琥珀酸',
+    alias: ['丁二酸'],
+    category: 'flavor enhancer',
+    categoryLabel: '增味剂',
+    function: '鲜味增味剂，提供贝类鲜味。',
+    action: '天然存在于贝类中，具独特鲜味，常用于酱油、调味料和酒类。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的增味剂，在配料表中通常以「琥珀酸」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '谷氨酸钾',
+    category: 'flavor enhancer',
+    categoryLabel: '增味剂',
+    function: '鲜味增味剂，谷氨酸的钾盐。',
+    action: '提供与味精相似的鲜味，适用于低钠调味品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，肾功能不全者需控制钾摄入。',
+    description: '本品是常见的增味剂，在配料表中通常以「谷氨酸钾」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '谷氨酸钙',
+    category: 'flavor enhancer',
+    categoryLabel: '增味剂',
+    function: '鲜味增味剂，谷氨酸的钙盐。',
+    action: '提供鲜味并补充钙质，常用于调味料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的增味剂，在配料表中通常以「谷氨酸钙」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '5\'-胞苷酸二钠',
+    alias: ['胞苷酸二钠'],
+    category: 'flavor enhancer',
+    categoryLabel: '增味剂',
+    function: '核苷酸类增味剂，与味精协同增鲜。',
+    action: '与谷氨酸钠协同作用可显著增强鲜味，常用于调味料和汤料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，痛风患者适量。',
+    description: '本品是常见的增味剂，在配料表中通常以「5\'-胞苷酸二钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: 'L-天门冬氨酸钠',
+    alias: ['天冬氨酸钠'],
+    category: 'flavor enhancer',
+    categoryLabel: '增味剂',
+    function: '氨基酸类增味剂，改善风味。',
+    action: '天然氨基酸的钠盐，能增强鲜味并缓和酸味，常用于调味料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的增味剂，在配料表中通常以「L-天门冬氨酸钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '酵母提取物',
+    alias: ['酵母抽提物'],
+    category: 'flavor enhancer',
+    categoryLabel: '增味剂',
+    function: '天然鲜味剂，富含氨基酸和核苷酸。',
+    action: '由酵母自溶提取，含谷氨酸和核苷酸，提供天然鲜味，常用于调味料和汤料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全，嘌呤含量需留意。',
+    description: '本品是常见的增味剂，在配料表中通常以「酵母提取物」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '水解植物蛋白',
+    alias: ['HVP', '植物水解蛋白'],
+    category: 'flavor enhancer',
+    categoryLabel: '增味剂',
+    function: '天然鲜味剂，富含氨基酸。',
+    action: '植物蛋白经酸或酶水解制得，提供鲜味和肉香，常用于酱油和调味料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的增味剂，在配料表中通常以「水解植物蛋白」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '胭脂虫红',
+    alias: ['胭脂红酸', 'Carmine'],
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然动物来源红色着色剂。',
+    action: '从胭脂虫中提取，色泽鲜艳稳定，常用于饮料、糖果、肉制品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '天然来源，但极少数人可能过敏。',
+    description: '本品是常见的着色剂，在配料表中通常以「胭脂虫红」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '胭脂红铝色淀',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '合成红色着色剂的铝色淀形式。',
+    action: '将胭脂红吸附于氧化铝载体，提高分散性和稳定性，常用于糖果包衣、糕点。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '含铝，儿童应控制含铝添加剂摄入。',
+    description: '本品是常见的着色剂，在配料表中通常以「胭脂红铝色淀」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '柠檬黄铝色淀',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '合成黄色着色剂的铝色淀形式。',
+    action: '吸附于氧化铝载体，色泽稳定，常用于糖果和糕点装饰。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '含铝并可能引起少数人过敏。',
+    description: '本品是常见的着色剂，在配料表中通常以「柠檬黄铝色淀」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '日落黄铝色淀',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '合成橙黄色着色剂的铝色淀形式。',
+    action: '用于糖果包衣和糕点装饰，色泽稳定。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '含铝，敏感人群注意。',
+    description: '本品是常见的着色剂，在配料表中通常以「日落黄铝色淀」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '亮蓝铝色淀',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '合成蓝色着色剂的铝色淀形式。',
+    action: '用于糖果和糕点装饰。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '含铝，建议控制摄入。',
+    description: '本品是常见的着色剂，在配料表中通常以「亮蓝铝色淀」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '诱惑红铝色淀',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '合成红色着色剂的铝色淀形式。',
+    action: '用于糖果、糕点包衣。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '含铝，敏感人群注意。',
+    description: '本品是常见的着色剂，在配料表中通常以「诱惑红铝色淀」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '苋菜红铝色淀',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '合成红色着色剂的铝色淀形式。',
+    action: '用于糖果和饮料粉。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '含铝，建议控制。',
+    description: '本品是常见的着色剂，在配料表中通常以「苋菜红铝色淀」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '赤藓红铝色淀',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '合成红色着色剂的铝色淀形式。',
+    action: '用于糖果和蜜饯。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '含铝，建议控制。',
+    description: '本品是常见的着色剂，在配料表中通常以「赤藓红铝色淀」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '靛蓝铝色淀',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '合成蓝色着色剂的铝色淀形式。',
+    action: '用于糖果和糕点。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '含铝，建议控制。',
+    description: '本品是常见的着色剂，在配料表中通常以「靛蓝铝色淀」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '二氧化钛',
+    alias: ['钛白粉'],
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '白色着色剂，提供不透明感和白度。',
+    action: '物理性白色颜料，不易被吸收，常用于糖果、口香糖、乳制品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '纳米级颗粒的吸收风险仍有争议，建议适量。',
+    description: '本品是常见的着色剂，在配料表中通常以「二氧化钛」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '氧化铁黑',
+    alias: ['四氧化三铁'],
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '黑色着色剂。',
+    action: '无机颜料，色泽稳定，常用于糖果和胶囊包衣。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '仅限特定食品使用，建议少量。',
+    description: '本品是常见的着色剂，在配料表中通常以「氧化铁黑」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '氧化铁红',
+    alias: ['三氧化二铁'],
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '红色着色剂。',
+    action: '无机颜料，耐光耐热，常用于糖果包衣。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '仅限特定食品使用。',
+    description: '本品是常见的着色剂，在配料表中通常以「氧化铁红」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '红曲米',
+    alias: ['红曲'],
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然微生物发酵红色着色剂。',
+    action: '由红曲霉发酵大米制得，含红曲色素，常用于肉制品、腐乳、酒类。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全，发酵产物需控制桔霉素。',
+    description: '本品是常见的着色剂，在配料表中通常以「红曲米」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '番茄红素',
+    alias: ['Lycopene'],
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然类胡萝卜素红色着色剂。',
+    action: '从番茄等提取，兼具抗氧化作用，常用于饮料和保健食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的着色剂，在配料表中通常以「番茄红素」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '辣椒红',
+    alias: ['辣椒红色素'],
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然类胡萝卜素红色着色剂。',
+    action: '从辣椒中提取，色泽鲜艳、耐热性好，常用于肉制品和调味料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的着色剂，在配料表中通常以「辣椒红」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '辣椒橙',
+    alias: ['辣椒橙色素'],
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然橙红色着色剂。',
+    action: '从辣椒中提取的色素组分，用于调味料和肉制品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的着色剂，在配料表中通常以「辣椒橙」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '沙棘黄',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然黄色着色剂。',
+    action: '从沙棘果实中提取，富含类胡萝卜素，常用于饮料和糕点。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的着色剂，在配料表中通常以「沙棘黄」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '菊花黄',
+    alias: ['菊花黄色素'],
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然黄色着色剂。',
+    action: '从菊花中提取，色泽自然，常用于饮料和糖果。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的着色剂，在配料表中通常以「菊花黄」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '黑豆红',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然红色着色剂。',
+    action: '从黑豆皮中提取的花青素类色素，常用于饮料和果冻。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的着色剂，在配料表中通常以「黑豆红」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '玫瑰茄红',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然红色着色剂。',
+    action: '从玫瑰茄花萼中提取，色泽随pH变化，常用于饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的着色剂，在配料表中通常以「玫瑰茄红」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '葡萄皮红',
+    alias: ['葡萄皮红色素'],
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然红色着色剂。',
+    action: '从葡萄皮中提取的花青素，常用于饮料和酒类。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的着色剂，在配料表中通常以「葡萄皮红」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '高粱红',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然红色着色剂。',
+    action: '从高粱壳中提取，耐热性好，常用于肉制品和糕点。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的着色剂，在配料表中通常以「高粱红」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '红米红',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然红色着色剂。',
+    action: '从红米中提取，常用于酒类和饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的着色剂，在配料表中通常以「红米红」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '藻蓝',
+    alias: ['藻蓝色素', '螺旋藻蓝'],
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然蓝色着色剂。',
+    action: '从螺旋藻中提取的藻蓝蛋白，是少见的天然蓝色色素，常用于糖果和饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全，藻类过敏者留意。',
+    description: '本品是常见的着色剂，在配料表中通常以「藻蓝」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '叶绿素铜钾盐',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '叶绿素的铜钾盐，绿色着色剂。',
+    action: '天然叶绿素经铜代后色泽更稳定，常用于糖果和饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '含铜，需控制摄入量。',
+    description: '本品是常见的着色剂，在配料表中通常以「叶绿素铜钾盐」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '叶黄素',
+    alias: ['Lutein'],
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然类胡萝卜素黄色着色剂。',
+    action: '从万寿菊中提取，兼具护眼作用，常用于饮料和保健食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的着色剂，在配料表中通常以「叶黄素」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: 'β-阿朴-8\'-胡萝卜素醛',
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然类胡萝卜素橙黄色着色剂。',
+    action: '类胡萝卜素衍生物，色泽鲜艳，常用于饮料和乳制品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的着色剂，在配料表中通常以「β-阿朴-8\'-胡萝卜素醛」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '姜黄素',
+    alias: ['Curcumin'],
+    category: 'colorant',
+    categoryLabel: '着色剂',
+    function: '天然黄色着色剂兼抗氧化。',
+    action: '从姜黄中提取，色泽鲜艳、具抗氧化性，常用于调味料和饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全，大剂量可能影响凝血。',
+    description: '本品是常见的着色剂，在配料表中通常以「姜黄素」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '柠檬酸钠',
+    alias: ['枸橼酸钠'],
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '调节酸度并螯合金属离子。',
+    action: '柠檬酸的钠盐，缓冲pH、螯合金属，常用于饮料和乳制品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，钠摄入需计入总量。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「柠檬酸钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '柠檬酸钾',
+    alias: ['枸橼酸钾'],
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '调节酸度并补充钾。',
+    action: '柠檬酸的钾盐，常用于低钠盐和饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，肾功能不全者控制钾摄入。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「柠檬酸钾」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '柠檬酸钙',
+    alias: ['枸橼酸钙'],
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '调节酸度并补充钙。',
+    action: '柠檬酸的钙盐，兼作钙强化剂，常用于饮料和乳制品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「柠檬酸钙」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '乳酸钾',
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '调节酸度并抑菌。',
+    action: '乳酸的钾盐，常用于肉制品和饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，肾功能不佳者注意钾摄入。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「乳酸钾」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '磷酸氢二钠',
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '调节酸度并作为缓冲剂。',
+    action: '磷酸盐缓冲体系的重要组分，常用于饮料和乳制品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，磷摄入需计入总量。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「磷酸氢二钠」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '磷酸二氢钠',
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '调节酸度并缓冲。',
+    action: '酸性磷酸盐，常用于饮料和烘焙食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，磷摄入需计入总量。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「磷酸二氢钠」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '磷酸氢二钾',
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '调节酸度并补充钾。',
+    action: '磷酸盐缓冲剂，常用于乳制品和饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '肾功能不全者需控制钾摄入。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「磷酸氢二钾」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '磷酸二氢钾',
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '调节酸度并缓冲。',
+    action: '酸性磷酸盐，常用于饮料和发酵食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，注意磷摄入。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「磷酸二氢钾」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '醋酸钠',
+    alias: ['乙酸钠'],
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '调节酸度并缓冲。',
+    action: '乙酸的钠盐，常用于调味料和烘焙食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「醋酸钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '碳酸钾',
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '碱性调节剂，兼作膨松剂。',
+    action: '常用于可可制品、面制品和调味料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，肾功能不全者注意钾。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「碳酸钾」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '碳酸氢钾',
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '碱性膨松剂和酸度调节剂。',
+    action: '受热分解产生二氧化碳，常用于烘焙食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，注意钾摄入。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「碳酸氢钾」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '氢氧化钾',
+    alias: ['苛性钾'],
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '强碱性pH调节剂。',
+    action: '强碱，需中和后使用，常用于可可加工和淀粉改性。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '强腐蚀性，成品中不得残留游离碱。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「氢氧化钾」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '氢氧化钙',
+    alias: ['熟石灰'],
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '碱性调节剂。',
+    action: '常用于糖类精炼和果蔬加工。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，须为食品级。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「氢氧化钙」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '富马酸一钠',
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '酸度调节剂，提供酸味。',
+    action: '富马酸的钠盐，酸味柔和，常用于饮料和调味料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「富马酸一钠」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '苹果酸钠',
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '酸度调节剂，提供酸味。',
+    action: '苹果酸的钠盐，酸味温和，常用于饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「苹果酸钠」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '酒石酸氢钾',
+    alias: ['塔塔粉'],
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '酸性膨松助剂。',
+    action: '常用于烘焙中与碳酸氢钠配合产生二氧化碳，也用于葡萄酒。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「酒石酸氢钾」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '柠檬酸一钠',
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '调节酸度并缓冲。',
+    action: '部分中和的柠檬酸盐，缓冲能力好，常用于饮料和果酱。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「柠檬酸一钠」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '葡萄糖酸-δ-内酯',
+    alias: ['GDL', '葡萄糖酸内酯'],
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '缓释酸化剂，用于豆腐凝固。',
+    action: '在水中缓慢水解为葡萄糖酸，使蛋白质缓慢凝固，是内酯豆腐的关键凝固剂。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「葡萄糖酸-δ-内酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '氯化钾',
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '代盐剂和酸度调节剂。',
+    action: '提供咸味，常用于低钠盐，但过量有苦味。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '肾功能不全者需严格限制钾摄入。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「氯化钾」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '氯化钙',
+    category: 'acidRegulator',
+    categoryLabel: '酸度调节剂',
+    function: '调节酸度并改善质构。',
+    action: '常用于罐头、果蔬保持脆度和乳制品凝固。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的酸度调节剂，在配料表中通常以「氯化钙」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '微晶纤维素',
+    alias: ['MCC'],
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '增稠、稳定和抗结。',
+    action: '纤维素部分水解产物，不溶性微晶结构，常用于乳制品、烘焙和膳食纤维补充。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「微晶纤维素」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '甲基纤维素',
+    alias: ['MC'],
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '增稠和成膜。',
+    action: '纤维素醚类，加热凝胶化，常用于油炸食品和冰淇淋。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「甲基纤维素」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '羟丙基甲基纤维素',
+    alias: ['HPMC'],
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '增稠、保水和成膜。',
+    action: '纤维素醚，常用于面制品、冰淇淋和植物蛋白饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「羟丙基甲基纤维素」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '羟丙基纤维素',
+    alias: ['HPC'],
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '增稠和成膜。',
+    action: '纤维素醚，常用于食品包衣和稳定体系。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「羟丙基纤维素」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '海藻酸丙二醇酯',
+    alias: ['PGA'],
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '增稠和乳化稳定。',
+    action: '海藻酸衍生物，耐酸性好，常用于酸奶和调味料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「海藻酸丙二醇酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '槐豆胶',
+    alias: ['刺槐豆胶', '角豆胶'],
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '增稠和稳定。',
+    action: '从角豆种子提取的半乳甘露聚糖，与黄原胶协同增稠，常用于冰淇淋。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「槐豆胶」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '塔拉胶',
+    alias: ['刺云实胶'],
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '增稠和稳定。',
+    action: '从塔拉种子提取，性能接近槐豆胶，常用于冰淇淋和酱料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「塔拉胶」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '亚麻籽胶',
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '天然增稠剂。',
+    action: '从亚麻籽中提取，具有良好的保水和增稠性。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「亚麻籽胶」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '沙蒿胶',
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '天然增稠剂。',
+    action: '从沙蒿种子提取，常用于面制品改善口感。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「沙蒿胶」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '皂荚糖胶',
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '天然增稠剂。',
+    action: '从皂荚种子提取的半乳甘露聚糖，常用于面制品和饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「皂荚糖胶」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '田菁胶',
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '天然增稠剂。',
+    action: '从田菁种子提取，常用于冰淇淋和饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「田菁胶」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '罗望子多糖胶',
+    alias: ['TSP'],
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '天然增稠和稳定剂。',
+    action: '从罗望子种子提取，耐热耐酸，常用于饮料和酱料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「罗望子多糖胶」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '可得然胶',
+    alias: ['Curdlan'],
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '微生物发酵来源的热凝胶增稠剂。',
+    action: '由细菌发酵产生，加热后形成不可逆凝胶，常用于肉制品和素食制品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然发酵来源，常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「可得然胶」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '普鲁兰多糖',
+    alias: ['Pullulan'],
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '微生物发酵来源的成膜增稠剂。',
+    action: '由出芽短梗霉发酵产生，成膜性好，常用于糖果包衣和可食用膜。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然发酵来源，常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「普鲁兰多糖」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: 'β-环状糊精',
+    alias: ['β-CD'],
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '包合稳定剂，掩盖异味。',
+    action: '环状寡糖，能包合风味物质和异味分子，常用于食品和香精。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，大剂量可能影响脂溶性营养素吸收。',
+    description: '本品是常见的增稠剂，在配料表中通常以「β-环状糊精」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '辛烯基琥珀酸淀粉钠',
+    alias: ['SSOS'],
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '乳化增稠变性淀粉。',
+    action: '兼具亲水和亲油基团，常用于香精、油脂微胶囊化和饮料乳化。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「辛烯基琥珀酸淀粉钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '淀粉磷酸酯钠',
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '变性淀粉增稠剂。',
+    action: '磷酸酯化淀粉，糊液稳定性好，常用于冷冻食品和酱料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「淀粉磷酸酯钠」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '羟丙基淀粉',
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '变性淀粉增稠剂。',
+    action: '羟丙基化改善冻融稳定性，常用于冷冻食品和调味酱。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「羟丙基淀粉」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '氧化淀粉',
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '变性淀粉增稠剂。',
+    action: '氧化降低淀粉黏度、提高稳定性，常用于糖果和食品加工。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「氧化淀粉」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '酸处理淀粉',
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '变性淀粉增稠剂。',
+    action: '酸水解降低淀粉分子量，常用于软糖和胶体食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「酸处理淀粉」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '羧甲基淀粉钠',
+    alias: ['CMS'],
+    category: 'thickener',
+    categoryLabel: '增稠剂',
+    function: '增稠和保水。',
+    action: '羧甲基化淀粉，冷水可溶，常用于饮料和调味料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的增稠剂，在配料表中通常以「羧甲基淀粉钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '卵磷脂',
+    alias: ['磷脂'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '天然乳化剂。',
+    action: '从大豆或蛋黄提取，兼有乳化和抗氧化作用，常用于巧克力、烘焙和饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全，大豆过敏者留意来源。',
+    description: '本品是常见的乳化剂，在配料表中通常以「卵磷脂」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '改性大豆磷脂',
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '改性天然乳化剂。',
+    action: '大豆磷脂经酶解或乙酰化改性，乳化性更强，常用于烘焙和乳制品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，常规使用安全。',
+    description: '本品是常见的乳化剂，在配料表中通常以「改性大豆磷脂」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '酶解大豆磷脂',
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '酶解天然乳化剂。',
+    action: '酶解提高亲水性，常用于水包油体系。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '天然来源，大豆过敏者留意。',
+    description: '本品是常见的乳化剂，在配料表中通常以「酶解大豆磷脂」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '聚氧乙烯(20)山梨醇酐单月桂酸酯',
+    alias: ['吐温20', 'Polysorbate 20'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '合成非离子乳化剂。',
+    action: '亲水性强，常用于饮料、香精和冰淇淋乳化。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '合成乳化剂，建议控制摄入量。',
+    description: '本品是常见的乳化剂，在配料表中通常以「聚氧乙烯(20)山梨醇酐单月桂酸酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '聚氧乙烯(20)山梨醇酐单棕榈酸酯',
+    alias: ['吐温40'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '合成非离子乳化剂。',
+    action: '常用于食品乳化和香精增溶。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '合成乳化剂，建议适量。',
+    description: '本品是常见的乳化剂，在配料表中通常以「聚氧乙烯(20)山梨醇酐单棕榈酸酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '聚氧乙烯(20)山梨醇酐单硬脂酸酯',
+    alias: ['吐温60'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '合成非离子乳化剂。',
+    action: '常用于糕点、冰淇淋和饮料。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '合成乳化剂，建议适量。',
+    description: '本品是常见的乳化剂，在配料表中通常以「聚氧乙烯(20)山梨醇酐单硬脂酸酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '山梨醇酐单油酸酯',
+    alias: ['司盘80', 'Span 80'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '非离子乳化剂。',
+    action: '亲油性强，常用于油包水体系、巧克力和冰淇淋。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的乳化剂，在配料表中通常以「山梨醇酐单油酸酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '山梨醇酐单月桂酸酯',
+    alias: ['司盘20'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '非离子乳化剂。',
+    action: '亲水性较强，常用于饮料和糕点。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的乳化剂，在配料表中通常以「山梨醇酐单月桂酸酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '山梨醇酐单棕榈酸酯',
+    alias: ['司盘40'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '非离子乳化剂。',
+    action: '常用于乳制品和烘焙食品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的乳化剂，在配料表中通常以「山梨醇酐单棕榈酸酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '山梨醇酐三硬脂酸酯',
+    alias: ['司盘65'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '非离子乳化剂。',
+    action: '亲油性强，常用于油脂和巧克力。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的乳化剂，在配料表中通常以「山梨醇酐三硬脂酸酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '丙二醇脂肪酸酯',
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '非离子乳化剂。',
+    action: '常用于糕点、冰淇淋和油脂。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的乳化剂，在配料表中通常以「丙二醇脂肪酸酯」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '聚甘油蓖麻醇酸酯',
+    alias: ['PGPR'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '巧克力专用乳化剂。',
+    action: '降低巧克力黏度、改善流动性和脱模性。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的乳化剂，在配料表中通常以「聚甘油蓖麻醇酸酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '柠檬酸脂肪酸甘油酯',
+    alias: ['CITREM'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '阴离子乳化剂。',
+    action: '常用于烘焙和乳制品，兼具抗氧化协同作用。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的乳化剂，在配料表中通常以「柠檬酸脂肪酸甘油酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '乳酸脂肪酸甘油酯',
+    alias: ['LACTEM'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '阴离子乳化剂。',
+    action: '常用于蛋糕、面包和咖啡伴侣。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的乳化剂，在配料表中通常以「乳酸脂肪酸甘油酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '双乙酰酒石酸单双甘油酯',
+    alias: ['DATEM'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '阴离子乳化剂。',
+    action: '与面筋蛋白结合增强面团网络，是面包改良剂的重要成分。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的乳化剂，在配料表中通常以「双乙酰酒石酸单双甘油酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '琥珀酸单甘油酯',
+    alias: ['SMG'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '阴离子乳化剂。',
+    action: '常用于烘焙和乳制品乳化稳定。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的乳化剂，在配料表中通常以「琥珀酸单甘油酯」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '硬脂酸钙',
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '乳化剂和抗结剂。',
+    action: '常用于食品粉末抗结和糖果。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的乳化剂，在配料表中通常以「硬脂酸钙」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 规定，在相应食品类别中按生产需要适量使用'
+  },
+  {
+    name: '聚氧乙烯聚氧丙烯季戊四醇醚',
+    alias: ['PPE'],
+    category: 'emulsifier',
+    categoryLabel: '乳化剂',
+    function: '合成消泡乳化剂。',
+    action: '常用于发酵和饮料加工中消泡。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '合成助剂，建议控制残留。',
+    description: '本品是常见的乳化剂，在配料表中通常以「聚氧乙烯聚氧丙烯季戊四醇醚」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '焦磷酸二氢二钠',
+    alias: ['酸式焦磷酸钠'],
+    category: 'stabilizer',
+    categoryLabel: '稳定剂',
+    function: '稳定、膨松和缓冲。',
+    action: '常用于烘焙膨松剂和肉制品保水。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全，磷摄入计入总量。',
+    description: '本品是常见的稳定剂，在配料表中通常以「焦磷酸二氢二钠」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '聚偏磷酸钾',
+    category: 'stabilizer',
+    categoryLabel: '稳定剂',
+    function: '稳定和保水。',
+    action: '长链磷酸盐，保水性强，常用于肉制品和水产品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '磷摄入需计入总量。',
+    description: '本品是常见的稳定剂，在配料表中通常以「聚偏磷酸钾」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '磷酸三钾',
+    category: 'stabilizer',
+    categoryLabel: '稳定剂',
+    function: '稳定和缓冲。',
+    action: '常用于乳制品和饮料稳定。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的稳定剂，在配料表中通常以「磷酸三钾」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '三聚磷酸钾',
+    category: 'stabilizer',
+    categoryLabel: '稳定剂',
+    function: '稳定和保水。',
+    action: '常用于肉制品和水产品保水。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '磷摄入需控制。',
+    description: '本品是常见的稳定剂，在配料表中通常以「三聚磷酸钾」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '焦磷酸四钾',
+    alias: ['TKPP'],
+    category: 'stabilizer',
+    categoryLabel: '稳定剂',
+    function: '稳定和螯合。',
+    action: '常用于肉制品和淀粉制品。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '磷摄入需控制。',
+    description: '本品是常见的稳定剂，在配料表中通常以「焦磷酸四钾」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '磷酸氢钙',
+    alias: ['磷酸二钙'],
+    category: 'stabilizer',
+    categoryLabel: '稳定剂',
+    function: '稳定、抗结并补钙。',
+    action: '常用于乳制品、烘焙和钙强化。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的稳定剂，在配料表中通常以「磷酸氢钙」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '磷酸二氢钙',
+    alias: ['磷酸一钙'],
+    category: 'stabilizer',
+    categoryLabel: '稳定剂',
+    function: '稳定和膨松。',
+    action: '常用于烘焙膨松剂和钙强化。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的稳定剂，在配料表中通常以「磷酸二氢钙」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '焦磷酸钙',
+    category: 'stabilizer',
+    categoryLabel: '稳定剂',
+    function: '稳定和抗结。',
+    action: '常用于食品粉末抗结。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规使用安全。',
+    description: '本品是常见的稳定剂，在配料表中通常以「焦磷酸钙」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '亚硝酸钾',
+    category: 'colorFixative',
+    categoryLabel: '护色剂',
+    function: '护色剂，保持肉制品粉红色并抑制肉毒杆菌。',
+    action: '与肌红蛋白结合形成亚硝基肌红蛋白，使肉制品呈稳定的粉红色，同时抑制肉毒梭菌。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'danger',
+    riskDesc: '可形成亚硝胺类致癌物，残留量受严格限制，婴幼儿食品禁用。',
+    description: '本品是常见的护色剂，在配料表中通常以「亚硝酸钾」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
+  },
+  {
+    name: '维生素K',
+    alias: ['维生素K1'],
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '促进凝血和骨骼健康。',
+    action: '参与凝血因子合成和骨钙代谢，常用于婴幼儿食品和营养强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全，服用抗凝药者需遵医嘱。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「维生素K」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '维生素B6',
+    alias: ['吡哆醇'],
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '参与氨基酸代谢和神经功能。',
+    action: '作为辅酶参与蛋白质代谢和神经递质合成，常用于营养强化食品。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全，大剂量长期服用可能致神经损伤。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「维生素B6」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '维生素B12',
+    alias: ['钴胺素'],
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '参与造血和神经功能。',
+    action: '参与红细胞生成和神经髓鞘合成，常用于营养强化食品。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「维生素B12」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '烟酸',
+    alias: ['维生素B3', '尼克酸'],
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '参与能量代谢。',
+    action: '辅酶NAD/NADP的组成成分，参与糖脂代谢，常用于营养强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '大剂量可能引起皮肤潮红，常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「烟酸」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '烟酰胺',
+    alias: ['尼克酰胺'],
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '参与能量代谢。',
+    action: '与烟酸功能相近但无潮红反应，常用于营养强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「烟酰胺」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '泛酸',
+    alias: ['维生素B5'],
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '参与能量代谢。',
+    action: '辅酶A的组成成分，参与脂肪酸代谢，常用于营养强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「泛酸」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '叶酸',
+    alias: ['维生素B9'],
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '参与细胞分裂和造血。',
+    action: '参与一碳单位代谢和DNA合成，孕期补充可预防神经管畸形。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全，大剂量可能掩盖B12缺乏。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「叶酸」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '生物素',
+    alias: ['维生素B7'],
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '参与羧化反应和代谢。',
+    action: '多种羧化酶的辅酶，参与糖脂蛋白代谢，常用于营养强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「生物素」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '维生素D3',
+    alias: ['胆钙化醇'],
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '促进钙磷吸收。',
+    action: '调节钙磷代谢和骨骼发育，常用于乳制品和婴幼儿食品强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '长期过量摄入可能引起高钙血症。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「维生素D3」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '葡萄糖酸钙',
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '补钙强化剂。',
+    action: '水溶性好、吸收温和，常用于饮料和乳制品钙强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「葡萄糖酸钙」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '乳酸亚铁',
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '补铁强化剂。',
+    action: '吸收率较高、胃肠刺激较小，常用于营养强化食品。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全，过量补铁有蓄积风险。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「乳酸亚铁」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '葡萄糖酸亚铁',
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '补铁强化剂。',
+    action: '水溶性铁源，常用于饮料和营养强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「葡萄糖酸亚铁」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '富马酸亚铁',
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '补铁强化剂。',
+    action: '含铁量高、稳定性好，常用于谷物和营养强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「富马酸亚铁」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '硫酸锌',
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '补锌强化剂。',
+    action: '吸收率较高，常用于营养强化食品。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '过量可能引起胃肠不适，常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「硫酸锌」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '乳酸锌',
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '补锌强化剂。',
+    action: '吸收温和，常用于乳制品和饮料强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「乳酸锌」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '氧化锌',
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '补锌强化剂。',
+    action: '含锌量高，常用于营养强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「氧化锌」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '硫酸铜',
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '补铜强化剂。',
+    action: '铜是多种酶的辅因子，常用于营养强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '过量有毒性，常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「硫酸铜」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '亚硒酸钠',
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '补硒强化剂。',
+    action: '硒是谷胱甘肽过氧化物酶的组成成分，常用于营养强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '硒的安全范围窄，过量可能中毒，需严格控制。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「亚硒酸钠」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '碘化钾',
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '补碘强化剂。',
+    action: '常用于食盐加碘和营养强化。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全，甲状腺疾病患者遵医嘱。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「碘化钾」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '碘酸钾',
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '补碘强化剂。',
+    action: '稳定性优于碘化钾，常用于食盐加碘。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「碘酸钾」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '酪蛋白磷酸肽',
+    alias: ['CPP'],
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '促进钙吸收。',
+    action: '与钙形成可溶性复合物，提高钙在肠道中的吸收率。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全，乳过敏者留意来源。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「酪蛋白磷酸肽」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '左旋肉碱',
+    alias: ['L-肉碱'],
+    category: 'nutrient',
+    categoryLabel: '营养强化剂',
+    function: '促进脂肪酸代谢。',
+    action: '协助长链脂肪酸进入线粒体氧化供能，常用于运动营养食品。',
+    standards: [
+      {
+        code: 'GB 14880-2012',
+        name: '食品安全国家标准 食品营养强化剂使用标准',
+        type: 'GB',
+        regulation: '规定了该营养强化剂允许使用的食品类别及强化量范围。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '常规强化量安全。',
+    description: '本品是常见的营养强化剂，在配料表中通常以「左旋肉碱」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 14880-2012 规定的食品类别及强化量使用'
+  },
+  {
+    name: '小麦粉',
+    alias: ['面粉'],
+    category: 'baseMaterial',
+    categoryLabel: '基础原料',
+    function: '主要淀粉和蛋白来源。',
+    action: '提供淀粉、蛋白质和面筋，是烘焙和面制品的基础原料。',
+    standards: [
+      {
+        code: 'GB 2762-2022',
+        name: '食品安全国家标准 食品中污染物限量',
+        type: 'GB',
+        regulation: '规定了该类食品原料中铅、砷、镉等污染物的限量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '安全，麸质过敏或乳糜泻人群需避免。',
+    description: '本品是常见的基础原料，在配料表中通常以「小麦粉」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '作为食品原料按生产需要适量使用，无特殊限量要求'
+  },
+  {
+    name: '玉米淀粉',
+    alias: ['粟米淀粉'],
+    category: 'baseMaterial',
+    categoryLabel: '基础原料',
+    function: '提供淀粉和增稠。',
+    action: '常用于勾芡、烘焙和粉状食品。',
+    standards: [
+      {
+        code: 'GB 2762-2022',
+        name: '食品安全国家标准 食品中污染物限量',
+        type: 'GB',
+        regulation: '规定了该类食品原料中铅、砷、镉等污染物的限量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '安全。',
+    description: '本品是常见的基础原料，在配料表中通常以「玉米淀粉」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '作为食品原料按生产需要适量使用，无特殊限量要求'
+  },
+  {
+    name: '马铃薯淀粉',
+    alias: ['土豆淀粉'],
+    category: 'baseMaterial',
+    categoryLabel: '基础原料',
+    function: '提供淀粉和增稠。',
+    action: '糊化温度低、黏度高，常用于酱料和冷冻食品。',
+    standards: [
+      {
+        code: 'GB 2762-2022',
+        name: '食品安全国家标准 食品中污染物限量',
+        type: 'GB',
+        regulation: '规定了该类食品原料中铅、砷、镉等污染物的限量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '安全。',
+    description: '本品是常见的基础原料，在配料表中通常以「马铃薯淀粉」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '作为食品原料按生产需要适量使用，无特殊限量要求'
+  },
+  {
+    name: '木薯淀粉',
+    alias: ['树薯淀粉'],
+    category: 'baseMaterial',
+    categoryLabel: '基础原料',
+    function: '提供淀粉和增稠。',
+    action: '常用于珍珠奶茶的珍珠、粉条和酱料。',
+    standards: [
+      {
+        code: 'GB 2762-2022',
+        name: '食品安全国家标准 食品中污染物限量',
+        type: 'GB',
+        regulation: '规定了该类食品原料中铅、砷、镉等污染物的限量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '安全。',
+    description: '本品是常见的基础原料，在配料表中通常以「木薯淀粉」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '作为食品原料按生产需要适量使用，无特殊限量要求'
+  },
+  {
+    name: '可可粉',
+    category: 'baseMaterial',
+    categoryLabel: '基础原料',
+    function: '提供可可风味和色泽。',
+    action: '由可可豆加工而成，含可可碱和少量咖啡因。',
+    standards: [
+      {
+        code: 'GB 2762-2022',
+        name: '食品安全国家标准 食品中污染物限量',
+        type: 'GB',
+        regulation: '规定了该类食品原料中铅、砷、镉等污染物的限量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '含少量咖啡因，儿童适量。',
+    description: '本品是常见的基础原料，在配料表中通常以「可可粉」标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '作为食品原料按生产需要适量使用，无特殊限量要求'
+  },
+  {
+    name: '乳粉',
+    alias: ['奶粉'],
+    category: 'baseMaterial',
+    categoryLabel: '基础原料',
+    function: '提供乳蛋白和乳脂。',
+    action: '常用于乳饮料、烘焙和糖果。',
+    standards: [
+      {
+        code: 'GB 2762-2022',
+        name: '食品安全国家标准 食品中污染物限量',
+        type: 'GB',
+        regulation: '规定了该类食品原料中铅、砷、镉等污染物的限量要求。'
+      }
+    ],
+    safetyLevel: 'safe',
+    riskDesc: '乳糖不耐受和乳蛋白过敏者需避免。',
+    description: '本品是常见的基础原料，在配料表中通常以「乳粉」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '作为食品原料按生产需要适量使用，无特殊限量要求'
+  },
+  {
+    name: '食用香精',
+    alias: ['食品用香精'],
+    category: 'baseMaterial',
+    categoryLabel: '基础原料',
+    function: '赋予或增强食品香气。',
+    action: '由天然或合成香料调配而成，用量极微。',
+    standards: [
+      {
+        code: 'GB 2760-2014',
+        name: '食品安全国家标准 食品添加剂使用标准',
+        type: 'GB',
+        regulation: '规定了该物质允许使用的食品类别、最大使用量或残留量要求。'
+      }
+    ],
+    safetyLevel: 'caution',
+    riskDesc: '合规使用安全，但可掩盖原料品质，建议少吃重香精食品。',
+    description: '本品是常见的基础原料，在配料表中通常以「食用香精」或其别名标示，具体使用要求见相关食品安全国家标准。',
+    usageLimit: '按 GB 2760-2014 表 A.1 规定的食品类别及最大使用量使用'
   }
 ];
 

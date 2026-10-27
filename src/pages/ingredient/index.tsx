@@ -6,7 +6,13 @@ import SearchBar from '@/components/SearchBar';
 import SafetyBadge from '@/components/SafetyBadge';
 import EmptyState from '@/components/EmptyState';
 import { useIngredientSearch } from '@/hooks/useIngredient';
+import { categoryLabelMap } from '@/types/ingredient';
 import styles from './index.module.scss';
+
+const PAGE_SIZE = 20;
+
+/** 固定分类（不依赖当前页数据） */
+const CATEGORIES = ['全部', ...Object.values(categoryLabelMap)];
 
 /**
  * 配料库页 - 搜索查询配料
@@ -15,34 +21,40 @@ function IngredientPage() {
   const { result, loading, search } = useIngredientSearch();
   const [keyword, setKeyword] = useState('');
   const [activeCategory, setActiveCategory] = useState<string>('全部');
+  const [page, setPage] = useState(1);
 
-  // 首次加载全量
+  // 首次加载
   useEffect(() => {
-    search('');
+    search('', 1, '');
   }, [search]);
 
-  // 关键词变化时搜索
+  // 关键词变化时重置到第一页
   const handleSearch = useCallback(
     (kw: string) => {
       setKeyword(kw);
-      search(kw);
+      setPage(1);
+      search(kw, 1, activeCategory === '全部' ? '' : activeCategory);
     },
-    [search]
+    [search, activeCategory]
   );
 
-  // 从结果中提取分类
-  const categories = ['全部'];
-  result.list.forEach(item => {
-    if (!categories.includes(item.categoryLabel)) {
-      categories.push(item.categoryLabel);
-    }
-  });
+  // 切换分类时重置到第一页
+  const handleCategory = (cat: string) => {
+    setActiveCategory(cat);
+    setPage(1);
+    search(keyword, 1, cat === '全部' ? '' : cat);
+  };
 
-  // 按分类筛选
-  const filteredList =
-    activeCategory === '全部'
-      ? result.list
-      : result.list.filter(i => i.categoryLabel === activeCategory);
+  // 翻页
+  const handlePage = (next: number) => {
+    const totalPages = Math.max(1, Math.ceil(result.total / PAGE_SIZE));
+    const target = Math.min(Math.max(1, next), totalPages);
+    if (target === page) return;
+    setPage(target);
+    search(keyword, target, activeCategory === '全部' ? '' : activeCategory);
+  };
+
+  const totalPages = Math.max(1, Math.ceil(result.total / PAGE_SIZE));
 
   // 点击进入详情
   const handleTap = (name: string) => {
@@ -60,11 +72,11 @@ function IngredientPage() {
 
       {/* 分类筛选 */}
       <ScrollView scrollX className={styles.categoryBar}>
-        {categories.map(cat => (
+        {CATEGORIES.map(cat => (
           <Text
             key={cat}
             className={classnames(styles.categoryItem, activeCategory === cat && styles.active)}
-            onClick={() => setActiveCategory(cat)}
+            onClick={() => handleCategory(cat)}
           >
             {cat}
           </Text>
@@ -75,10 +87,10 @@ function IngredientPage() {
       <ScrollView scrollY className={styles.list}>
         {loading ? (
           <Text className={styles.loadingText}>加载中...</Text>
-        ) : filteredList.length === 0 ? (
+        ) : result.list.length === 0 ? (
           <EmptyState text='未找到相关配料' subText='换个关键词试试' />
         ) : (
-          filteredList.map(item => (
+          result.list.map(item => (
             <View
               key={item.name}
               className={styles.itemCard}
@@ -97,6 +109,31 @@ function IngredientPage() {
               </View>
             </View>
           ))
+        )}
+
+        {/* 分页 */}
+        {!loading && result.total > PAGE_SIZE && (
+          <View className={styles.pagination}>
+            <Text
+              className={classnames(styles.pageBtn, page <= 1 && styles.pageBtnDisabled)}
+              onClick={() => handlePage(page - 1)}
+            >
+              上一页
+            </Text>
+            <Text className={styles.pageInfo}>
+              {page} / {totalPages}
+            </Text>
+            <Text
+              className={classnames(styles.pageBtn, page >= totalPages && styles.pageBtnDisabled)}
+              onClick={() => handlePage(page + 1)}
+            >
+              下一页
+            </Text>
+          </View>
+        )}
+
+        {!loading && result.total > 0 && (
+          <Text className={styles.totalText}>共 {result.total} 种配料</Text>
         )}
       </ScrollView>
     </View>

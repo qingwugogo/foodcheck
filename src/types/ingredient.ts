@@ -70,6 +70,10 @@ export interface IngredientSearchItem {
 export interface SearchResult {
   list: IngredientSearchItem[];
   total: number;
+  /** 当前页码（从 1 开始） */
+  page?: number;
+  /** 每页条数 */
+  pageSize?: number;
 }
 
 /** 分类中文名映射 */

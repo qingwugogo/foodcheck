@@ -34,21 +34,26 @@ export function useIngredientDetail() {
 }
 
 /**
- * 搜索配料库
+ * 搜索配料库（支持关键词、分类与分页）
  */
 export function useIngredientSearch() {
   const [result, setResult] = useState<SearchResult>({ list: [], total: 0 });
   const [loading, setLoading] = useState(false);
 
-  const search = useCallback(async (keyword: string) => {
+  const search = useCallback(async (keyword: string, page = 1, category = '') => {
     setLoading(true);
     try {
-      const res = await callFunction<SearchResult>('searchIngredients', { keyword });
+      const res = await callFunction<SearchResult>('searchIngredients', {
+        keyword,
+        page,
+        pageSize: 20,
+        category
+      });
       setResult(res);
       return res;
     } catch (err) {
       console.error('[IngredientSearch] 搜索失败:', err);
-      return { list: [], total: 0 };
+      return { list: [], total: 0, page, pageSize: 20 };
     } finally {
       setLoading(false);
     }

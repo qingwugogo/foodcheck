@@ -106,3 +106,39 @@
   color: $color-text-tertiary;
   font-size: $font-size-sm;
 }
+
+/* 分页 */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-lg 0 $spacing-sm;
+}
+
+.pageBtn {
+  padding: $spacing-xs $spacing-lg;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  background: $color-bg-card;
+  border-radius: $radius-round;
+  box-shadow: $shadow-card;
+
+  &.pageBtnDisabled {
+    color: $color-text-disabled;
+    opacity: 0.6;
+  }
+}
+
+.pageInfo {
+  margin: 0 $spacing-lg;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.totalText {
+  display: block;
+  text-align: center;
+  padding: $spacing-sm 0 $spacing-lg;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}

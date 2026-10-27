@@ -1,5 +1,5 @@
 // 云函数识别兜底精简数据
-// 与前端 src/data/ingredients.ts 保持一致
+// 自动生成，数据源: src/data/ingredients.ts
 module.exports = [
   {
     "name": "白砂糖",
@@ -1213,5 +1213,1709 @@ module.exports = [
     "categoryLabel": "稳定剂",
     "safetyLevel": "caution",
     "function": "稳定、螯合、缓冲，常用于肉制品、土豆制品。"
+  },
+  {
+    "name": "山梨酸",
+    "alias": [
+      "2,4-己二烯酸",
+      "花楸酸"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "safe",
+    "function": "抑制霉菌、酵母菌和多种腐败菌生长，是山梨酸钾的酸型母体。"
+  },
+  {
+    "name": "苯甲酸",
+    "alias": [
+      "安息香酸"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "抑制细菌和霉菌生长，是苯甲酸钠的酸型母体。"
+  },
+  {
+    "name": "脱氢乙酸",
+    "alias": [
+      "脱氢醋酸"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "广谱防腐剂，抑制霉菌、酵母菌和细菌，是脱氢乙酸钠的酸型母体。"
+  },
+  {
+    "name": "对羟基苯甲酸丙酯",
+    "alias": [
+      "尼泊金丙酯",
+      "丙酯"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "酯类防腐剂，抑制霉菌和酵母菌生长。"
+  },
+  {
+    "name": "对羟基苯甲酸丁酯",
+    "alias": [
+      "尼泊金丁酯",
+      "丁酯"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "酯类防腐剂，抑制霉菌和酵母菌。"
+  },
+  {
+    "name": "丙酸",
+    "alias": [
+      "初油酸"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "safe",
+    "function": "抑制霉菌和部分细菌生长，是丙酸钙、丙酸钠的酸型母体。"
+  },
+  {
+    "name": "乳酸钠",
+    "alias": [
+      "2-羟基丙酸钠"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "safe",
+    "function": "抑菌保鲜并调节酸度，常用于肉制品和饮料。"
+  },
+  {
+    "name": "ε-聚赖氨酸盐酸盐",
+    "alias": [
+      "聚赖氨酸"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "safe",
+    "function": "天然生物防腐剂，抑制革兰氏阳性菌和部分霉菌。"
+  },
+  {
+    "name": "双乙酸钾",
+    "alias": [
+      "二乙酸钾"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "safe",
+    "function": "抑制霉菌和细菌生长，兼有调味作用。"
+  },
+  {
+    "name": "肉桂醛",
+    "alias": [
+      "桂醛"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "safe",
+    "function": "天然植物来源防腐剂，抑制霉菌和细菌。"
+  },
+  {
+    "name": "乙氧基喹",
+    "alias": [
+      "乙氧喹"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "抗氧化兼防腐，主要用于水果保鲜。"
+  },
+  {
+    "name": "联苯醚",
+    "alias": [
+      "二苯醚"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "防霉保鲜剂，用于柑橘类水果表面处理。"
+  },
+  {
+    "name": "仲丁胺",
+    "alias": [
+      "2-氨基丁烷"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "熏蒸型防腐剂，用于水果蔬菜贮运保鲜。"
+  },
+  {
+    "name": "二氧化氯",
+    "alias": [
+      "稳定态二氧化氯"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "强氧化性消毒防腐剂，用于水处理和食品加工消毒。"
+  },
+  {
+    "name": "过氧化氢",
+    "alias": [
+      "双氧水"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "消毒漂白剂，用于食品加工设备和包装材料消毒。"
+  },
+  {
+    "name": "溶菌酶",
+    "alias": [
+      "胞壁质酶"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "safe",
+    "function": "天然酶类防腐剂，水解细菌细胞壁。"
+  },
+  {
+    "name": "壳聚糖",
+    "alias": [
+      "甲壳素"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "safe",
+    "function": "天然多糖防腐保鲜剂，抑制微生物并形成保鲜膜。"
+  },
+  {
+    "name": "噻苯咪唑",
+    "alias": [
+      "噻菌灵"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "内吸性杀菌剂，用于水果采后防腐。"
+  },
+  {
+    "name": "山梨酸钙",
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "safe",
+    "function": "山梨酸的钙盐，抑制霉菌和酵母菌。"
+  },
+  {
+    "name": "焦亚硫酸钠",
+    "alias": [
+      "偏重亚硫酸钠"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "释放二氧化硫，起防腐和漂白作用。"
+  },
+  {
+    "name": "焦亚硫酸钾",
+    "alias": [
+      "偏重亚硫酸钾"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "释放二氧化硫，防腐漂白。"
+  },
+  {
+    "name": "亚硫酸钠",
+    "alias": [
+      "无水亚硫酸钠"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "释放二氧化硫，防腐漂白。"
+  },
+  {
+    "name": "亚硫酸氢钠",
+    "alias": [
+      "重亚硫酸钠"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "释放二氧化硫，防腐抗氧化。"
+  },
+  {
+    "name": "低亚硫酸钠",
+    "alias": [
+      "保险粉"
+    ],
+    "category": "preservative",
+    "categoryLabel": "防腐剂",
+    "safetyLevel": "caution",
+    "function": "强还原性漂白防腐剂。"
+  },
+  {
+    "name": "抗坏血酸钠",
+    "alias": [
+      "维生素C钠"
+    ],
+    "category": "antioxidant",
+    "categoryLabel": "抗氧化剂",
+    "safetyLevel": "safe",
+    "function": "抗氧化剂，防止食品氧化变色。"
+  },
+  {
+    "name": "抗坏血酸钙",
+    "alias": [
+      "维生素C钙"
+    ],
+    "category": "antioxidant",
+    "categoryLabel": "抗氧化剂",
+    "safetyLevel": "safe",
+    "function": "抗氧化剂兼钙强化。"
+  },
+  {
+    "name": "抗坏血酸棕榈酸酯",
+    "alias": [
+      "维生素C棕榈酸酯"
+    ],
+    "category": "antioxidant",
+    "categoryLabel": "抗氧化剂",
+    "safetyLevel": "safe",
+    "function": "脂溶性抗氧化剂，保护油脂不氧化。"
+  },
+  {
+    "name": "异抗坏血酸",
+    "alias": [
+      "赤藻糖酸"
+    ],
+    "category": "antioxidant",
+    "categoryLabel": "抗氧化剂",
+    "safetyLevel": "safe",
+    "function": "抗氧化剂，防止食品氧化变色。"
+  },
+  {
+    "name": "没食子酸辛酯",
+    "alias": [
+      "辛基没食子酸酯"
+    ],
+    "category": "antioxidant",
+    "categoryLabel": "抗氧化剂",
+    "safetyLevel": "caution",
+    "function": "脂溶性抗氧化剂，防止油脂酸败。"
+  },
+  {
+    "name": "没食子酸十二酯",
+    "alias": [
+      "十二烷基没食子酸酯",
+      "月桂酸没食子酸酯"
+    ],
+    "category": "antioxidant",
+    "categoryLabel": "抗氧化剂",
+    "safetyLevel": "caution",
+    "function": "脂溶性抗氧化剂，防止油脂酸败。"
+  },
+  {
+    "name": "硫代二丙酸二月桂酯",
+    "alias": [
+      "DLTP"
+    ],
+    "category": "antioxidant",
+    "categoryLabel": "抗氧化剂",
+    "safetyLevel": "safe",
+    "function": "辅助抗氧化剂，分解油脂氧化产物。"
+  },
+  {
+    "name": "乙二胺四乙酸二钠",
+    "alias": [
+      "EDTA二钠"
+    ],
+    "category": "antioxidant",
+    "categoryLabel": "抗氧化剂",
+    "safetyLevel": "caution",
+    "function": "螯合金属离子，防止氧化变色。"
+  },
+  {
+    "name": "植酸",
+    "alias": [
+      "肌醇六磷酸"
+    ],
+    "category": "antioxidant",
+    "categoryLabel": "抗氧化剂",
+    "safetyLevel": "safe",
+    "function": "天然抗氧化剂，螯合金属离子。"
+  },
+  {
+    "name": "葡萄糖氧化酶",
+    "alias": [
+      "GOx"
+    ],
+    "category": "antioxidant",
+    "categoryLabel": "抗氧化剂",
+    "safetyLevel": "safe",
+    "function": "酶类抗氧化剂，消耗氧气防止氧化。"
+  },
+  {
+    "name": "愈创树脂",
+    "alias": [
+      "愈创木树脂"
+    ],
+    "category": "antioxidant",
+    "categoryLabel": "抗氧化剂",
+    "safetyLevel": "safe",
+    "function": "天然抗氧化剂，防止油脂氧化。"
+  },
+  {
+    "name": "爱德万甜",
+    "alias": [
+      "Advantame"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "高倍甜味剂，甜度约为蔗糖的2万倍。"
+  },
+  {
+    "name": "罗汉果甜苷",
+    "alias": [
+      "罗汉果提取物",
+      "Mogroside"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "天然高倍甜味剂，甜度约为蔗糖的300倍。"
+  },
+  {
+    "name": "索马甜",
+    "alias": [
+      "Thaumatin",
+      "非洲甜蛋白"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "天然蛋白质甜味剂，甜度约为蔗糖的2000倍。"
+  },
+  {
+    "name": "甘草酸铵",
+    "alias": [
+      "甘草甜素铵"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "天然甜味剂，甜度约为蔗糖的50倍。"
+  },
+  {
+    "name": "甘草酸一钾",
+    "alias": [
+      "甘草酸钾"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "天然甜味剂，兼具增味作用。"
+  },
+  {
+    "name": "乳糖醇",
+    "alias": [
+      "Lactitol"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "糖醇类甜味剂，甜度约为蔗糖的40%。"
+  },
+  {
+    "name": "异麦芽酮糖醇",
+    "alias": [
+      "益寿糖",
+      "Isomalt"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "糖醇类甜味剂，甜度约为蔗糖的50%。"
+  },
+  {
+    "name": "D-甘露糖醇",
+    "alias": [
+      "甘露醇"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "糖醇类甜味剂，甜度约为蔗糖的70%。"
+  },
+  {
+    "name": "低聚木糖",
+    "alias": [
+      "木寡糖"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "功能性低聚糖，甜度低、促进肠道有益菌。"
+  },
+  {
+    "name": "低聚果糖",
+    "alias": [
+      "果寡糖",
+      "FOS"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "功能性低聚糖，甜度约为蔗糖的30%。"
+  },
+  {
+    "name": "低聚异麦芽糖",
+    "alias": [
+      "异麦芽低聚糖",
+      "IMO"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "功能性低聚糖，甜度低、保湿性好。"
+  },
+  {
+    "name": "聚葡萄糖",
+    "alias": [
+      "Polydextrose"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "水溶性膳食纤维，低热量填充型甜味剂。"
+  },
+  {
+    "name": "阿力甜",
+    "alias": [
+      "Alitame"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "高倍甜味剂，甜度约为蔗糖的2000倍。"
+  },
+  {
+    "name": "新橙皮苷二氢查尔酮",
+    "alias": [
+      "NHDC"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "天然高倍甜味剂，兼具增香作用。"
+  },
+  {
+    "name": "低聚半乳糖",
+    "alias": [
+      "GOS"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "功能性低聚糖，促进肠道有益菌。"
+  },
+  {
+    "name": "水苏糖",
+    "alias": [
+      "Stachyose"
+    ],
+    "category": "sweetener",
+    "categoryLabel": "甜味剂",
+    "safetyLevel": "safe",
+    "function": "功能性四糖，促进肠道有益菌增殖。"
+  },
+  {
+    "name": "乙基麦芽酚",
+    "alias": [
+      "麦芽酚乙酯"
+    ],
+    "category": "flavor enhancer",
+    "categoryLabel": "增味剂",
+    "safetyLevel": "safe",
+    "function": "增香增味剂，能增强甜香和果香。"
+  },
+  {
+    "name": "L-丙氨酸",
+    "category": "flavor enhancer",
+    "categoryLabel": "增味剂",
+    "safetyLevel": "safe",
+    "function": "氨基酸类增味剂，缓和酸味和苦味。"
+  },
+  {
+    "name": "甘氨酸",
+    "alias": [
+      "氨基乙酸"
+    ],
+    "category": "flavor enhancer",
+    "categoryLabel": "增味剂",
+    "safetyLevel": "safe",
+    "function": "氨基酸类增味剂，调节甜味和酸味。"
+  },
+  {
+    "name": "DL-丙氨酸",
+    "category": "flavor enhancer",
+    "categoryLabel": "增味剂",
+    "safetyLevel": "safe",
+    "function": "氨基酸类增味剂，改善风味平衡。"
+  },
+  {
+    "name": "琥珀酸",
+    "alias": [
+      "丁二酸"
+    ],
+    "category": "flavor enhancer",
+    "categoryLabel": "增味剂",
+    "safetyLevel": "safe",
+    "function": "鲜味增味剂，提供贝类鲜味。"
+  },
+  {
+    "name": "谷氨酸钾",
+    "category": "flavor enhancer",
+    "categoryLabel": "增味剂",
+    "safetyLevel": "safe",
+    "function": "鲜味增味剂，谷氨酸的钾盐。"
+  },
+  {
+    "name": "谷氨酸钙",
+    "category": "flavor enhancer",
+    "categoryLabel": "增味剂",
+    "safetyLevel": "safe",
+    "function": "鲜味增味剂，谷氨酸的钙盐。"
+  },
+  {
+    "name": "5'-胞苷酸二钠",
+    "alias": [
+      "胞苷酸二钠"
+    ],
+    "category": "flavor enhancer",
+    "categoryLabel": "增味剂",
+    "safetyLevel": "safe",
+    "function": "核苷酸类增味剂，与味精协同增鲜。"
+  },
+  {
+    "name": "L-天门冬氨酸钠",
+    "alias": [
+      "天冬氨酸钠"
+    ],
+    "category": "flavor enhancer",
+    "categoryLabel": "增味剂",
+    "safetyLevel": "safe",
+    "function": "氨基酸类增味剂，改善风味。"
+  },
+  {
+    "name": "酵母提取物",
+    "alias": [
+      "酵母抽提物"
+    ],
+    "category": "flavor enhancer",
+    "categoryLabel": "增味剂",
+    "safetyLevel": "safe",
+    "function": "天然鲜味剂，富含氨基酸和核苷酸。"
+  },
+  {
+    "name": "水解植物蛋白",
+    "alias": [
+      "HVP",
+      "植物水解蛋白"
+    ],
+    "category": "flavor enhancer",
+    "categoryLabel": "增味剂",
+    "safetyLevel": "safe",
+    "function": "天然鲜味剂，富含氨基酸。"
+  },
+  {
+    "name": "胭脂虫红",
+    "alias": [
+      "胭脂红酸",
+      "Carmine"
+    ],
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "caution",
+    "function": "天然动物来源红色着色剂。"
+  },
+  {
+    "name": "胭脂红铝色淀",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "caution",
+    "function": "合成红色着色剂的铝色淀形式。"
+  },
+  {
+    "name": "柠檬黄铝色淀",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "caution",
+    "function": "合成黄色着色剂的铝色淀形式。"
+  },
+  {
+    "name": "日落黄铝色淀",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "caution",
+    "function": "合成橙黄色着色剂的铝色淀形式。"
+  },
+  {
+    "name": "亮蓝铝色淀",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "caution",
+    "function": "合成蓝色着色剂的铝色淀形式。"
+  },
+  {
+    "name": "诱惑红铝色淀",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "caution",
+    "function": "合成红色着色剂的铝色淀形式。"
+  },
+  {
+    "name": "苋菜红铝色淀",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "caution",
+    "function": "合成红色着色剂的铝色淀形式。"
+  },
+  {
+    "name": "赤藓红铝色淀",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "caution",
+    "function": "合成红色着色剂的铝色淀形式。"
+  },
+  {
+    "name": "靛蓝铝色淀",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "caution",
+    "function": "合成蓝色着色剂的铝色淀形式。"
+  },
+  {
+    "name": "二氧化钛",
+    "alias": [
+      "钛白粉"
+    ],
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "caution",
+    "function": "白色着色剂，提供不透明感和白度。"
+  },
+  {
+    "name": "氧化铁黑",
+    "alias": [
+      "四氧化三铁"
+    ],
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "caution",
+    "function": "黑色着色剂。"
+  },
+  {
+    "name": "氧化铁红",
+    "alias": [
+      "三氧化二铁"
+    ],
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "caution",
+    "function": "红色着色剂。"
+  },
+  {
+    "name": "红曲米",
+    "alias": [
+      "红曲"
+    ],
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然微生物发酵红色着色剂。"
+  },
+  {
+    "name": "番茄红素",
+    "alias": [
+      "Lycopene"
+    ],
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然类胡萝卜素红色着色剂。"
+  },
+  {
+    "name": "辣椒红",
+    "alias": [
+      "辣椒红色素"
+    ],
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然类胡萝卜素红色着色剂。"
+  },
+  {
+    "name": "辣椒橙",
+    "alias": [
+      "辣椒橙色素"
+    ],
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然橙红色着色剂。"
+  },
+  {
+    "name": "沙棘黄",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然黄色着色剂。"
+  },
+  {
+    "name": "菊花黄",
+    "alias": [
+      "菊花黄色素"
+    ],
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然黄色着色剂。"
+  },
+  {
+    "name": "黑豆红",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然红色着色剂。"
+  },
+  {
+    "name": "玫瑰茄红",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然红色着色剂。"
+  },
+  {
+    "name": "葡萄皮红",
+    "alias": [
+      "葡萄皮红色素"
+    ],
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然红色着色剂。"
+  },
+  {
+    "name": "高粱红",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然红色着色剂。"
+  },
+  {
+    "name": "红米红",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然红色着色剂。"
+  },
+  {
+    "name": "藻蓝",
+    "alias": [
+      "藻蓝色素",
+      "螺旋藻蓝"
+    ],
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然蓝色着色剂。"
+  },
+  {
+    "name": "叶绿素铜钾盐",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "caution",
+    "function": "叶绿素的铜钾盐，绿色着色剂。"
+  },
+  {
+    "name": "叶黄素",
+    "alias": [
+      "Lutein"
+    ],
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然类胡萝卜素黄色着色剂。"
+  },
+  {
+    "name": "β-阿朴-8'-胡萝卜素醛",
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然类胡萝卜素橙黄色着色剂。"
+  },
+  {
+    "name": "姜黄素",
+    "alias": [
+      "Curcumin"
+    ],
+    "category": "colorant",
+    "categoryLabel": "着色剂",
+    "safetyLevel": "safe",
+    "function": "天然黄色着色剂兼抗氧化。"
+  },
+  {
+    "name": "柠檬酸钠",
+    "alias": [
+      "枸橼酸钠"
+    ],
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "调节酸度并螯合金属离子。"
+  },
+  {
+    "name": "柠檬酸钾",
+    "alias": [
+      "枸橼酸钾"
+    ],
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "调节酸度并补充钾。"
+  },
+  {
+    "name": "柠檬酸钙",
+    "alias": [
+      "枸橼酸钙"
+    ],
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "调节酸度并补充钙。"
+  },
+  {
+    "name": "乳酸钾",
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "调节酸度并抑菌。"
+  },
+  {
+    "name": "磷酸氢二钠",
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "调节酸度并作为缓冲剂。"
+  },
+  {
+    "name": "磷酸二氢钠",
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "调节酸度并缓冲。"
+  },
+  {
+    "name": "磷酸氢二钾",
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "调节酸度并补充钾。"
+  },
+  {
+    "name": "磷酸二氢钾",
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "调节酸度并缓冲。"
+  },
+  {
+    "name": "醋酸钠",
+    "alias": [
+      "乙酸钠"
+    ],
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "调节酸度并缓冲。"
+  },
+  {
+    "name": "碳酸钾",
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "碱性调节剂，兼作膨松剂。"
+  },
+  {
+    "name": "碳酸氢钾",
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "碱性膨松剂和酸度调节剂。"
+  },
+  {
+    "name": "氢氧化钾",
+    "alias": [
+      "苛性钾"
+    ],
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "caution",
+    "function": "强碱性pH调节剂。"
+  },
+  {
+    "name": "氢氧化钙",
+    "alias": [
+      "熟石灰"
+    ],
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "碱性调节剂。"
+  },
+  {
+    "name": "富马酸一钠",
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "酸度调节剂，提供酸味。"
+  },
+  {
+    "name": "苹果酸钠",
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "酸度调节剂，提供酸味。"
+  },
+  {
+    "name": "酒石酸氢钾",
+    "alias": [
+      "塔塔粉"
+    ],
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "酸性膨松助剂。"
+  },
+  {
+    "name": "柠檬酸一钠",
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "调节酸度并缓冲。"
+  },
+  {
+    "name": "葡萄糖酸-δ-内酯",
+    "alias": [
+      "GDL",
+      "葡萄糖酸内酯"
+    ],
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "缓释酸化剂，用于豆腐凝固。"
+  },
+  {
+    "name": "氯化钾",
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "caution",
+    "function": "代盐剂和酸度调节剂。"
+  },
+  {
+    "name": "氯化钙",
+    "category": "acidRegulator",
+    "categoryLabel": "酸度调节剂",
+    "safetyLevel": "safe",
+    "function": "调节酸度并改善质构。"
+  },
+  {
+    "name": "微晶纤维素",
+    "alias": [
+      "MCC"
+    ],
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "增稠、稳定和抗结。"
+  },
+  {
+    "name": "甲基纤维素",
+    "alias": [
+      "MC"
+    ],
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "增稠和成膜。"
+  },
+  {
+    "name": "羟丙基甲基纤维素",
+    "alias": [
+      "HPMC"
+    ],
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "增稠、保水和成膜。"
+  },
+  {
+    "name": "羟丙基纤维素",
+    "alias": [
+      "HPC"
+    ],
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "增稠和成膜。"
+  },
+  {
+    "name": "海藻酸丙二醇酯",
+    "alias": [
+      "PGA"
+    ],
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "增稠和乳化稳定。"
+  },
+  {
+    "name": "槐豆胶",
+    "alias": [
+      "刺槐豆胶",
+      "角豆胶"
+    ],
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "增稠和稳定。"
+  },
+  {
+    "name": "塔拉胶",
+    "alias": [
+      "刺云实胶"
+    ],
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "增稠和稳定。"
+  },
+  {
+    "name": "亚麻籽胶",
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "天然增稠剂。"
+  },
+  {
+    "name": "沙蒿胶",
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "天然增稠剂。"
+  },
+  {
+    "name": "皂荚糖胶",
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "天然增稠剂。"
+  },
+  {
+    "name": "田菁胶",
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "天然增稠剂。"
+  },
+  {
+    "name": "罗望子多糖胶",
+    "alias": [
+      "TSP"
+    ],
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "天然增稠和稳定剂。"
+  },
+  {
+    "name": "可得然胶",
+    "alias": [
+      "Curdlan"
+    ],
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "微生物发酵来源的热凝胶增稠剂。"
+  },
+  {
+    "name": "普鲁兰多糖",
+    "alias": [
+      "Pullulan"
+    ],
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "微生物发酵来源的成膜增稠剂。"
+  },
+  {
+    "name": "β-环状糊精",
+    "alias": [
+      "β-CD"
+    ],
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "包合稳定剂，掩盖异味。"
+  },
+  {
+    "name": "辛烯基琥珀酸淀粉钠",
+    "alias": [
+      "SSOS"
+    ],
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "乳化增稠变性淀粉。"
+  },
+  {
+    "name": "淀粉磷酸酯钠",
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "变性淀粉增稠剂。"
+  },
+  {
+    "name": "羟丙基淀粉",
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "变性淀粉增稠剂。"
+  },
+  {
+    "name": "氧化淀粉",
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "变性淀粉增稠剂。"
+  },
+  {
+    "name": "酸处理淀粉",
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "变性淀粉增稠剂。"
+  },
+  {
+    "name": "羧甲基淀粉钠",
+    "alias": [
+      "CMS"
+    ],
+    "category": "thickener",
+    "categoryLabel": "增稠剂",
+    "safetyLevel": "safe",
+    "function": "增稠和保水。"
+  },
+  {
+    "name": "卵磷脂",
+    "alias": [
+      "磷脂"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "天然乳化剂。"
+  },
+  {
+    "name": "改性大豆磷脂",
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "改性天然乳化剂。"
+  },
+  {
+    "name": "酶解大豆磷脂",
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "酶解天然乳化剂。"
+  },
+  {
+    "name": "聚氧乙烯(20)山梨醇酐单月桂酸酯",
+    "alias": [
+      "吐温20",
+      "Polysorbate 20"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "caution",
+    "function": "合成非离子乳化剂。"
+  },
+  {
+    "name": "聚氧乙烯(20)山梨醇酐单棕榈酸酯",
+    "alias": [
+      "吐温40"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "caution",
+    "function": "合成非离子乳化剂。"
+  },
+  {
+    "name": "聚氧乙烯(20)山梨醇酐单硬脂酸酯",
+    "alias": [
+      "吐温60"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "caution",
+    "function": "合成非离子乳化剂。"
+  },
+  {
+    "name": "山梨醇酐单油酸酯",
+    "alias": [
+      "司盘80",
+      "Span 80"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "非离子乳化剂。"
+  },
+  {
+    "name": "山梨醇酐单月桂酸酯",
+    "alias": [
+      "司盘20"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "非离子乳化剂。"
+  },
+  {
+    "name": "山梨醇酐单棕榈酸酯",
+    "alias": [
+      "司盘40"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "非离子乳化剂。"
+  },
+  {
+    "name": "山梨醇酐三硬脂酸酯",
+    "alias": [
+      "司盘65"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "非离子乳化剂。"
+  },
+  {
+    "name": "丙二醇脂肪酸酯",
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "非离子乳化剂。"
+  },
+  {
+    "name": "聚甘油蓖麻醇酸酯",
+    "alias": [
+      "PGPR"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "巧克力专用乳化剂。"
+  },
+  {
+    "name": "柠檬酸脂肪酸甘油酯",
+    "alias": [
+      "CITREM"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "阴离子乳化剂。"
+  },
+  {
+    "name": "乳酸脂肪酸甘油酯",
+    "alias": [
+      "LACTEM"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "阴离子乳化剂。"
+  },
+  {
+    "name": "双乙酰酒石酸单双甘油酯",
+    "alias": [
+      "DATEM"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "阴离子乳化剂。"
+  },
+  {
+    "name": "琥珀酸单甘油酯",
+    "alias": [
+      "SMG"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "阴离子乳化剂。"
+  },
+  {
+    "name": "硬脂酸钙",
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "safe",
+    "function": "乳化剂和抗结剂。"
+  },
+  {
+    "name": "聚氧乙烯聚氧丙烯季戊四醇醚",
+    "alias": [
+      "PPE"
+    ],
+    "category": "emulsifier",
+    "categoryLabel": "乳化剂",
+    "safetyLevel": "caution",
+    "function": "合成消泡乳化剂。"
+  },
+  {
+    "name": "焦磷酸二氢二钠",
+    "alias": [
+      "酸式焦磷酸钠"
+    ],
+    "category": "stabilizer",
+    "categoryLabel": "稳定剂",
+    "safetyLevel": "safe",
+    "function": "稳定、膨松和缓冲。"
+  },
+  {
+    "name": "聚偏磷酸钾",
+    "category": "stabilizer",
+    "categoryLabel": "稳定剂",
+    "safetyLevel": "safe",
+    "function": "稳定和保水。"
+  },
+  {
+    "name": "磷酸三钾",
+    "category": "stabilizer",
+    "categoryLabel": "稳定剂",
+    "safetyLevel": "safe",
+    "function": "稳定和缓冲。"
+  },
+  {
+    "name": "三聚磷酸钾",
+    "category": "stabilizer",
+    "categoryLabel": "稳定剂",
+    "safetyLevel": "safe",
+    "function": "稳定和保水。"
+  },
+  {
+    "name": "焦磷酸四钾",
+    "alias": [
+      "TKPP"
+    ],
+    "category": "stabilizer",
+    "categoryLabel": "稳定剂",
+    "safetyLevel": "safe",
+    "function": "稳定和螯合。"
+  },
+  {
+    "name": "磷酸氢钙",
+    "alias": [
+      "磷酸二钙"
+    ],
+    "category": "stabilizer",
+    "categoryLabel": "稳定剂",
+    "safetyLevel": "safe",
+    "function": "稳定、抗结并补钙。"
+  },
+  {
+    "name": "磷酸二氢钙",
+    "alias": [
+      "磷酸一钙"
+    ],
+    "category": "stabilizer",
+    "categoryLabel": "稳定剂",
+    "safetyLevel": "safe",
+    "function": "稳定和膨松。"
+  },
+  {
+    "name": "焦磷酸钙",
+    "category": "stabilizer",
+    "categoryLabel": "稳定剂",
+    "safetyLevel": "safe",
+    "function": "稳定和抗结。"
+  },
+  {
+    "name": "亚硝酸钾",
+    "category": "colorFixative",
+    "categoryLabel": "护色剂",
+    "safetyLevel": "danger",
+    "function": "护色剂，保持肉制品粉红色并抑制肉毒杆菌。"
+  },
+  {
+    "name": "维生素K",
+    "alias": [
+      "维生素K1"
+    ],
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "促进凝血和骨骼健康。"
+  },
+  {
+    "name": "维生素B6",
+    "alias": [
+      "吡哆醇"
+    ],
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "参与氨基酸代谢和神经功能。"
+  },
+  {
+    "name": "维生素B12",
+    "alias": [
+      "钴胺素"
+    ],
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "参与造血和神经功能。"
+  },
+  {
+    "name": "烟酸",
+    "alias": [
+      "维生素B3",
+      "尼克酸"
+    ],
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "参与能量代谢。"
+  },
+  {
+    "name": "烟酰胺",
+    "alias": [
+      "尼克酰胺"
+    ],
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "参与能量代谢。"
+  },
+  {
+    "name": "泛酸",
+    "alias": [
+      "维生素B5"
+    ],
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "参与能量代谢。"
+  },
+  {
+    "name": "叶酸",
+    "alias": [
+      "维生素B9"
+    ],
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "参与细胞分裂和造血。"
+  },
+  {
+    "name": "生物素",
+    "alias": [
+      "维生素B7"
+    ],
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "参与羧化反应和代谢。"
+  },
+  {
+    "name": "维生素D3",
+    "alias": [
+      "胆钙化醇"
+    ],
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "促进钙磷吸收。"
+  },
+  {
+    "name": "葡萄糖酸钙",
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "补钙强化剂。"
+  },
+  {
+    "name": "乳酸亚铁",
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "补铁强化剂。"
+  },
+  {
+    "name": "葡萄糖酸亚铁",
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "补铁强化剂。"
+  },
+  {
+    "name": "富马酸亚铁",
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "补铁强化剂。"
+  },
+  {
+    "name": "硫酸锌",
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "补锌强化剂。"
+  },
+  {
+    "name": "乳酸锌",
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "补锌强化剂。"
+  },
+  {
+    "name": "氧化锌",
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "补锌强化剂。"
+  },
+  {
+    "name": "硫酸铜",
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "补铜强化剂。"
+  },
+  {
+    "name": "亚硒酸钠",
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "caution",
+    "function": "补硒强化剂。"
+  },
+  {
+    "name": "碘化钾",
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "补碘强化剂。"
+  },
+  {
+    "name": "碘酸钾",
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "补碘强化剂。"
+  },
+  {
+    "name": "酪蛋白磷酸肽",
+    "alias": [
+      "CPP"
+    ],
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "促进钙吸收。"
+  },
+  {
+    "name": "左旋肉碱",
+    "alias": [
+      "L-肉碱"
+    ],
+    "category": "nutrient",
+    "categoryLabel": "营养强化剂",
+    "safetyLevel": "safe",
+    "function": "促进脂肪酸代谢。"
+  },
+  {
+    "name": "小麦粉",
+    "alias": [
+      "面粉"
+    ],
+    "category": "baseMaterial",
+    "categoryLabel": "基础原料",
+    "safetyLevel": "safe",
+    "function": "主要淀粉和蛋白来源。"
+  },
+  {
+    "name": "玉米淀粉",
+    "alias": [
+      "粟米淀粉"
+    ],
+    "category": "baseMaterial",
+    "categoryLabel": "基础原料",
+    "safetyLevel": "safe",
+    "function": "提供淀粉和增稠。"
+  },
+  {
+    "name": "马铃薯淀粉",
+    "alias": [
+      "土豆淀粉"
+    ],
+    "category": "baseMaterial",
+    "categoryLabel": "基础原料",
+    "safetyLevel": "safe",
+    "function": "提供淀粉和增稠。"
+  },
+  {
+    "name": "木薯淀粉",
+    "alias": [
+      "树薯淀粉"
+    ],
+    "category": "baseMaterial",
+    "categoryLabel": "基础原料",
+    "safetyLevel": "safe",
+    "function": "提供淀粉和增稠。"
+  },
+  {
+    "name": "可可粉",
+    "category": "baseMaterial",
+    "categoryLabel": "基础原料",
+    "safetyLevel": "safe",
+    "function": "提供可可风味和色泽。"
+  },
+  {
+    "name": "乳粉",
+    "alias": [
+      "奶粉"
+    ],
+    "category": "baseMaterial",
+    "categoryLabel": "基础原料",
+    "safetyLevel": "safe",
+    "function": "提供乳蛋白和乳脂。"
+  },
+  {
+    "name": "食用香精",
+    "alias": [
+      "食品用香精"
+    ],
+    "category": "baseMaterial",
+    "categoryLabel": "基础原料",
+    "safetyLevel": "caution",
+    "function": "赋予或增强食品香气。"
   }
-]
+];

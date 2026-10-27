@@ -8,6 +8,9 @@ dist/
 # 本地密钥（保护 API Key，请勿提交）
 src/data/.glm-key.ts
 
+# 云数据库导入用临时文件（由 src/data/ingredients.ts 生成）
+ingredients-import.json
+
 # 系统
 .DS_Store
 *.log

@@ -6,24 +6,40 @@ const fallbackIngredients = require('./ingredients-data.js')
 
 exports.main = async (event, context) => {
   try {
-    const { keyword = '', page = 1, pageSize = 50 } = event
+    const {
+      keyword = '',
+      category = '',
+      page = 1,
+      pageSize = 20
+    } = event
+    const safePage = Math.max(1, Number(page) || 1)
+    const safePageSize = Math.min(100, Math.max(1, Number(pageSize) || 20))
 
     // 优先查询数据库
     try {
       let query = db.collection('ingredients')
+      const conds = []
       if (keyword) {
         const reg = db.RegExp({ regexp: keyword, options: 'i' })
-        query = query.where(
+        conds.push(
           db.command.or([
             { name: reg },
             { categoryLabel: db.RegExp({ regexp: keyword, options: 'i' }) }
           ])
         )
       }
+      if (category) {
+        conds.push({ categoryLabel: category })
+      }
+      if (conds.length === 1) {
+        query = query.where(conds[0])
+      } else if (conds.length > 1) {
+        query = query.where(db.command.and(conds))
+      }
       const countRes = await query.count()
       const listRes = await query
-        .skip((page - 1) * pageSize)
-        .limit(pageSize)
+        .skip((safePage - 1) * safePageSize)
+        .limit(safePageSize)
         .field({ name: true, categoryLabel: true, safetyLevel: true, function: true })
         .get()
 
@@ -32,7 +48,9 @@ exports.main = async (event, context) => {
         message: 'success',
         data: {
           list: listRes.data,
-          total: countRes.total
+          total: countRes.total,
+          page: safePage,
+          pageSize: safePageSize
         }
       }
     } catch (e) {
@@ -40,16 +58,19 @@ exports.main = async (event, context) => {
     }
 
     // 兜底
-    const list = fallbackIngredients
-      .filter(i => {
-        if (!keyword) return true
-        return (
-          i.name.includes(keyword) ||
-          (i.alias && i.alias.some(a => a.includes(keyword))) ||
-          i.categoryLabel.includes(keyword) ||
-          i.function.includes(keyword)
-        )
-      })
+    const filtered = fallbackIngredients.filter(i => {
+      if (category && i.categoryLabel !== category) return false
+      if (!keyword) return true
+      return (
+        i.name.includes(keyword) ||
+        (i.alias && i.alias.some(a => a.includes(keyword))) ||
+        i.categoryLabel.includes(keyword) ||
+        i.function.includes(keyword)
+      )
+    })
+    const start = (safePage - 1) * safePageSize
+    const list = filtered
+      .slice(start, start + safePageSize)
       .map(i => ({
         name: i.name,
         categoryLabel: i.categoryLabel,
@@ -60,7 +81,7 @@ exports.main = async (event, context) => {
     return {
       code: 0,
       message: 'success',
-      data: { list, total: list.length }
+      data: { list, total: filtered.length, page: safePage, pageSize: safePageSize }
     }
   } catch (err) {
     console.error('[searchIngredients] error:', err)
