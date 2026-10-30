@@ -9,7 +9,7 @@ const fallbackIngredients = require('./ingredients-data.js')
 const GLM_API_URL = 'https://open.bigmodel.cn/api/paas/v4/chat/completions'
 const GLM_MODEL = 'glm-4v-flash'
 // 默认 Key 兜底（与 scanIngredient 共用），优先级：前端传入 > 环境变量 > 此默认
-const DEFAULT_GLM_API_KEY = 'b55969a9a3eb4f18b0fa08851e66e3e9.psxc2bqyrYwjLeKL'
+const DEFAULT_GLM_API_KEY = '04cdbb9e505c4c60803670b7ff5f2bcb.BkYyjWcgtHe04VC2'
 
 /**
  * 调 GLM 补全配料缺失的详细字段（action/description/usageLimit/riskDesc/standards）
